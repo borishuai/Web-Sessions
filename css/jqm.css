@@ -1,0 +1,119 @@
+.jqm-demo1{
+  background: url(../img/jqm/jqm-demo1.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.jqm-demo2{
+  background: url(../img/jqm/jqm-demo2.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.jqm-demo3{
+  background: url(../img/jqm/jqm-demo3.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.jqm-demo4{
+  background: url(../img/jqm/jqm-demo4.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.jqm-demo5{
+  background: url(../img/jqm/jqm-demo5.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.jqm-demo6{
+  background: url(../img/jqm/jqm-demo6.png) no-repeat;
+  height: 482px;
+  width: 322px;
+}
+.hcenter {
+  float: left;
+  margin: 10px !important;
+}
+.jqm-supported-platform{
+  background: url(../img/jqm/jqm-supported-platforms.png) no-repeat;
+  height: 137px;
+  width: 745px;
+}
+
+.header-bar-demo1{
+  background: url(../img/jqm/toolbars-header-bg1.png) no-repeat;
+  width: 999px;
+  height: 50px;
+}
+.header-bar-demo2{
+  background: url(../img/jqm/toolbars-header-bg2.png) no-repeat;
+  width: 999px;
+  height: 50px;
+}
+
+.footer-bar-demo1{
+  background: url(../img/jqm/toolbars-footer-bg1.png) no-repeat;
+  width: 999px;
+  height: 50px;
+}
+.footer-bar-demo2{
+  background: url(../img/jqm/toolbars-footer-bg2.png) no-repeat;
+  width: 999px;
+  height: 50px;
+}
+.navbar-demo1{
+  background: url(../img/jqm/navbar-bg1.png) no-repeat;
+  width: 999px;
+  height: 50px;
+}
+.theme-navbar-demo{
+  background: url(../img/jqm/theme-navbar-bg.png) no-repeat;
+  width: 1001px;
+  height: 611px;
+}
+.button-basic-demo{
+  background: url(../img/jqm/button-basic-bg.png) no-repeat;
+  width: 1000px;
+  height: 100px;
+}
+.button-basic-demo2{
+  background: url(../img/jqm/button-basic-bg2.png) no-repeat;
+  width: 1000px;
+  height: 460px;
+}
+.form-elements-demo{
+  background: url(../img/jqm/form-elements-bg.png) no-repeat;
+  width: 850px;
+  height: 665px;
+}
+.configure-options{}
+.configure-options dt{
+  margin: 35px 0 15px 0!important;
+  background-color: #DDD;
+  font-weight: normal;
+}
+.configure-options dt code{
+  display: inline-block;
+  font-weight: bold;
+  color: #56A00E!important;
+  padding: 3px 7px;
+  margin-right: 10px;
+  background-color: white;
+}
+.configure-options dd {
+  margin-left: 40px;
+  font-size: 0.75em;
+}
+.events-note{
+  border: 1px solid #F7C942 !important;
+  color: #222;
+  text-shadow: 0 1px 0 white ;
+  padding: 20px 10px !important;
+  background: #FFF9DF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from( #FFFADF ), to( #FFF3A5));
+  background-image: -webkit-linear-gradient( #FFFADF, #FFF3A5);background-image: -moz-linear-gradient( #FFFADF, #FFF3A5);
+  background-image: -ms-linear-gradient( #FFFADF, #FFF3A5);
+  background-image: -o-linear-gradient( #FFFADF, #FFF3A5);
+  background-image: linear-gradient( #FFFADF, #FFF3A5);
+}
+.events-note code{
+  color: #56A00E!important;
+}
