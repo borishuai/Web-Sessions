@@ -348,6 +348,7 @@
         <li><a href="http://qunitjs.com/" target="_blank">QUnit</a></li>
         <li><a href="http://pivotal.github.com/jasmine/" target="_blank">Jasmine</a></li>
         <li><a href="http://code.google.com/p/js-test-driver/" target="_blank">JsTestDriver</a></li>
+        <li><a href="https://github.com/vojtajina/testacular" target="_blank">Testacular</a></li>
       </ul>
       <p>目前jQuery的所有代码都是通过QUnit进行测试的，并且将<a href="https://github.com/jquery/jquery/tree/master/test/unit" target="_blank">测试代码</a>放在Github上了，大家感兴趣可以参考一下。详见： <a href="http://www.weakweb.com/articles/255.html" target="_blank">JavaScript单元测试框架介绍</a></p>
     </section>
@@ -452,7 +453,15 @@
          
     <section class="slide" id="deploy">
       <h2>前端流程/部署</h2>
-      <p>当前端项目比较复杂时，我们就应该考虑引入自动构建，自动化部署等技术了。可以使用JSLint来对JavaScript进行语法检查，用CSSLint或CSS Validator检查CSS语法，用JSMin或YUI Compressor对JavaScript代码进行压缩，可以使用JSDoc/YUIdoc进行文档自动化生成，使用Jasmine/JsTestDriver进行自动化单元测试，可以使用Ant/Maven/Make进行自动构建部署。</p>
+      <p>当前端项目比较复杂时，我们就应该考虑引入自动构建，自动化部署等技术了。</p>
+      <ul>
+        <li><strong>任务管理/自动化</strong>: Ant，Maven，可以用来自动build代码，它可以将所有其它的任务统一管理起来。</li>
+        <li><strong>代码检查工具</strong>: JsLint/closure linter来检查JavaScript代码，CSSLint检查CSS代码。</li>
+        <li><strong>js/css压缩工具</strong>: yui compressor可以用来压缩JS和CSS，JSMin和google closure compiler也可以用来压缩代码。</li>
+        <li><strong>文档生成</strong>: jsdoc-toolkit，类似于JAVADoc，用于从源代码的注释生成文档。</li>
+        <li><strong>单元测试</strong>: Jasmine/QUnit等</li>
+      </ul>
+      <p>可以参考：<a href="http://www.baiduux.com/blog/2011/04/15/tangram-dev-tools/" target="_blank">tangram开发中使用的开源工具介绍</a></p>
     </section>
          
     <section class="slide" id="plugin">
