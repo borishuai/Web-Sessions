@@ -10,5 +10,7 @@ All the sessions are in the sessions folder. They are html pages and you can jus
 <ul>
   <li>HTML</li>
   <li>CSS</li>
+  <li>Front End Introduction</li>
+  <li>Front End Process Automation</li>
   <li>JQueryMobile</li>
 </ul>
