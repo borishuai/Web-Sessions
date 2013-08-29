@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>CSS Architecture</title>
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="../css/common.css">
+	
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/web-2.0.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+	
+	<script src="../modernizr.custom.js"></script>
+
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <button id="toggle_menu">Show Menu</button>
+      <button id="toggle_goto">Toggle Goto</button>
+      <button id="first_page">First Page</button>
+      <button id="last_page">Last Page</button>
+    </nav>
+  </header>
+  
+  <article class="deck-container">
+    <!-- Begin slides -->
+    <section class="slide" id="title-slide">
+      <h1>CSS Architecture</h1>
+    </section>
+
+    <section class="slide" id="agenda">
+      <h2>Agenda</h2>
+      <ul>
+        <li>
+          <h3>良好的CSS架构目标</h3>
+        </li>
+        <li>
+          <h3>常见的错误实践</h3>
+        </li>
+        <li>
+          <h3>原因</h3>
+        </li>
+        <li>
+          <h3>解决方案</h3>
+        </li>
+        <li>
+          <h3>最佳实践</h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="introduction">
+      <h2>综述</h2>
+      <p>对于想踏入前端开发的工程师来说，通晓CSS（Cascading Style Sheets）则是最基本的要求。而擅长CSS的Web开发人员不仅可以从视觉上复制实物原型，还可以用代码进行完美的呈现。无需使用表格、尽可能少的使用图片。如果你是个名副其实的高手，你可以快速把最新和最伟大的技术应用到你的项目中，比如媒体查询、过渡、滤镜、转换等。虽然这些都是一个真正的CSS高手所具备的，但CSS很少被人单独拿出来讨论，或者用它去评估某个人的技能。</p>
+      <p>有趣的是，我们很少这样去评价其他语言。Rails开发人员并不会因为其代码比较规范，就认为他是一名优秀的开发人员。这仅仅是个基准。当然，他的代码得必须规范。另外，还需集合其他方面考虑，比如代码是否可读？是否容易修改或扩展……</p>
+      <p>这都是些很自然的问题，CSS和它们并没有什么不同之处。今天的Web应用程序要比以往更加庞大。一个缺乏深思熟虑的CSS架构往往会削弱发展，是时候像评估其他语言那样，来评估一下CSS架构了，这些都不应该放在“事后”考虑或者单单属于设计师们的事情。</p>
+    </section>
+
+    <section class="slide" id="goal">
+      <h2>良好的CSS架构目标</h2>
+      <p>在CSS社区，很难提出某个最佳实践已经成为大家的普遍共识。纯粹地从Hacker News的评论上判断和开发者们对CSS Lint发布后的反应来看，大多数人甚至于对于开发人员应该遵守CSS中比较基础的开发规则都持反对意见的。</p>
+      <p>所以，我觉得我们应该先从定义我们的目标开始，而不是引起一个关于我自己最佳实践的新的争吵。如果我们能够同意我们的目标，那样我们就有希望开始寻找出那些不好的CSS，不是根据我们之前形成的好坏观念来判断，而是这些CSS确实阻碍了我们的开发进度。</p>
+      <p>我相信好的CSS架构的目标不应该区别于所有好的软件开发目标，好的CSS应该具有以下特点：</p>
+      <ul>
+      	<li>可预测</li>
+      	<li>可重用</li>
+      	<li>可维护</li>
+      	<li>可扩展</li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="predictable">
+      <h2>可预测</h2>
+      <p>可预测意味着可以像预期的那样工作。当你添加或者修改某个规则时，它并不会影响到没有指定的部分。对于一个小网站来说，一些微乎其微的改变并不算什么。而对于拥有成千上万个页面的大网站来说，可预测却是必须的。</p>
+    </section>
+    
+    <section class="slide" id="reusable">
+      <h2>可重用</h2>
+      <p>CSS规则应具备抽象和解耦性，这样你就可以在现有的基础上快速构建新的组件，无需重新修改编码模式。</p>
+    </section>
+    
+    <section class="slide" id="maintainable">
+      <h2>可维护</h2>
+      <p>当把新组件放置到网站上，并且执行添加、修改或者重新设计操作时，无需重构现有CSS，并且新添加的X并不会打破原有页面的Y组件。</p>
+    </section>
+    
+    <section class="slide" id="scalable">
+      <h2>可扩展</h2>
+      <p>当网站发展到一定规模后，都需要进行维护和扩展。可扩展的CSS意味着网站的CSS架构可以由个人或者团队轻易地管理，无需花费太多的学习成本。因为虽然现在你是唯一接触CSS的开发人员，但是并不意味着将来也会一直如此。</p>
+    </section>
+
+    <section class="slide" id="anti_pattern">
+      <h2>常见的错误实践(反模式)</h2>
+      <p>在实现良好的CSS架构目标之前，我们来看一些常见的错误做法，这对我们达成目标是有好处的。</p>
+      <p>下面的这些例子虽然都可以很好的执行，但却会给你带来很多烦恼，尽管我们的意图和愿望都是美好的，但是这些开发模式会让你头疼。</p>
+      <ul>
+      	<li>基于父组件来修改组件</li>
+      	<li>过于复杂的选择器</li>
+      	<li>过于通用的类名</li>
+      	<li>一个规则做太多事</li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="base_parent1">
+      <h2>基于父组件来修改组件1</h2>
+      <p>几乎在每个网站上，都会有一个特定的视觉元素看起来与其他页面是完全一样的，然而只有一个页面除外。当面对这样一种情况时，几乎每个新手CSS开发人员（甚至是经验丰富的）都会以同样的方式来修改。你会为这个特殊的地方找到一些唯一的祖先元素（或者自己创建），然后再写一个新规则去操作。</p>
+      <pre>
+        .widget {
+          background: yellow;
+          border: 1px solid black;
+          color: black;
+          width: 50%;
+        }
+
+        #sidebar .widget {
+          width: 200px;
+        }
+
+        body.homepage .widget {
+          background: white;
+        }
+      </pre>
+    </section>
+    
+        <section class="slide" id="base_parent2">
+      <h2>基于父组件来修改组件2</h2>
+      <p>初看，这绝对是段无害的代码，但让我们来看看它是否达到了我们所设置的目标。</p>
+      <p>首先，widget在上面例子里是不可预测的。当开发人员创建了若干个这种 widget 时，他会预期这些 widget 拥有相同的显示方式，然而当她在 sidebar 和 homepage 里使用 widget 时，它们看起来是不一样的，尽管它们拥有完全一样的结构。</p>
+      <p>另外，它也是不可重用或不可扩展的。当 homepage 的 widget 要求和其它地方的 widget 拥有一样的显示方式会发生什么呢？不得不去增加新的规则来修改它。</p>
+      <p>最后，它也比较难以维护。一旦这个widget需要重新设计，那么你不得不修改好多地方的CSS样式，而且不像上面的例子，产生这些反模式的CSS规则分散在各处，难以查找。</p>
+      <p>想象一下，如果这段代码是使用其他语言编写的，它基本就是一个类定义，然后在代码的另一部分使用该类定义并做出扩展。这直接违反了软件开发的开放/闭合（open/close）原则。</p>
+      <blockquote>
+      <p>软件实体（类，模块，函数等）应对扩展开放，对修改闭合。</p>
+      </blockquote>
+    </section>
+
+    <section class="slide" id="complex">
+      <h2>过于复杂的选择器</h2>
+      <p>偶尔，会有些文章介绍CSS选择器对整个网站的展示起着非常重要的作用，并且宣称无需使用任何类选择器或者ID选择器就能够对整个网站进行样式化。</p>
+      <p>但伴随着越深入的开发，我越会远离这种复杂的选择器。一个选择器越复杂，与HTML就越耦合。依靠HTML标签和组合器可以保持HTML代码干干净净，但却让CSS更加的凌乱。</p>
+      <pre>
+        #main-nav ul li ul li div { }
+        #content article h1:first-child { }
+        #sidebar > div > h3 + p { }
+      </pre>
+      <p>如果这个HTML是永远不变的，那就无可说之处，但这根本毫不现实。过于复杂的选择器会让人印象深刻，它可以让HTML去除展现用的钩子(hooks)，但对于实现良好的CSS架构目标却毫无用处。</p>
+      <p>上面提到的例子根本没有办法进行复用。既然这些选择器指向结构中非常特殊的地方，其它拥有不同HTML结构的组件如何复用这引起样式？例如第一个选择器（下来菜单）例子，如果一个外观非常相似的下拉列表需要用在不同的页面上，并且它不是#main-nav的子元素，那么你只有重新创建整个样式。</p>
+      <p>如果HTML结构需要修改，那么这些选择器也是不可预测的。假设开发者想要修改第三个例子里div里面部分标记，那么整个规则都会被打破。</p>
+      <p>最后，既然这些选择器只有在HTML结构永远不会修改时才能工作，从定义来看它们也是不可维护或不可扩展的。</p>
+      <p>在大的应用中，你必须做出取舍和折衷。复杂选择器的脆弱性仅仅能使你的HTML代码保持整洁。</p>
+    </section>
+
+    <section class="slide" id="generic">
+      <h2>过于通用的类名</h2>
+      <p>当创建可重用的设计组件时，使用组件的类名作为子元素选择器的前辍是很常见的用法。例如：</p>
+      <pre>
+        &lt;div class=&quot;widget&quot;&gt;
+          &lt;h3 class=&quot;title&quot;&gt;...&lt;/h3&gt;
+          &lt;div class=&quot;contents&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            In condimentum justo et est dapibus sit amet euismod ligula ornare.
+            Vivamus elementum accumsan dignissim.
+            &lt;button class=&quot;action&quot;&gt;Click Me!&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </pre>
+      <pre>
+        .widget {}
+        .widget .title {}
+        .widget .contents {}
+        .widget .action {}
+      </pre>
+      <p>像.title、.contents、.action这些子元素类选择器可以被安全地进行样式命名，无需担心这些样式会蔓延到拥有相同类名的其他元素中。这是千真万确的。但它并没有办法阻止其它地方拥有相同类名的样式会蔓延到这个组件上来。</p>
+    </section>
+
+    <section class="slide" id="toomuch">
+      <h2>一个规则做太多事</h2>
+      <p>有时，你要在网站的左上角区域20px的地方做一个可视化组件。</p>
+      <pre>
+        .widget {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          background-color: red;
+          font-size: 1.5em;
+          text-transform: uppercase;
+        }
+      </pre>
+      <p>下面，你需要在网站的其他区域使用该组件，那么上面的CSS是不会工作的，因为它在不同的环境里是不可重用的。</p>
+      <p>问题的关键是你让.widget这个选择器做的事情太多。你把它的外观方面进行了样式和位置以及布局方面的样式定义在同一个规则里。外观可以重用，而位置和布局是不可以的。有时候，把它们整合起来使用反而会大打折扣。</p>
+      <p>虽然这些看起来并无害处，但它最终会使一些缺乏经验的CSS程序员来说选择复制和粘贴。如果一个新的团队成员需要一个特定组件，比如.infobox，他们通常会先尝试使用这个类。但如果该信息框没有按照期望的那样显示，因为它没有在需要的位置正确显示出来。这时，你认为他们会怎么做？以我的经验来看，绝大部分开发人员不会把规则分解成几个可复用的部分，相反，他们会简单地把这些代码复制粘贴到每个需要的地方。产生一些不必要的重复代码。</p>
+    </section>
+
+    <section class="slide" id="cause">
+      <h2>原因</h2>
+      <p>上面列举的这些常规错误实践都有一个相似性，CSS样式承担过多。</p>
+      <p>对这样的说法你会感到奇怪，毕竟，它是一个样式表，难道不应该承担大多数（如果不是全部）的样式吗？那不正是我们想要的吗？</p>
+      <p>这个问题的简单回答是“yes”。但是通常来讲，事情并没有那么简单。把内容从展现分离是件好事，但并不是说把CSS从HTML中分离出来就意味着你的内容从展现分离出来了。换句话说，<em>如果你的CSS需要精确的了解HTML的结构才能工作，那么即使把所有的展现的代码从HTML里面抽取出来也不会达成目标</em>。</p>
+      <p>此外，HTML很少会只包含内容，也经常被用作结构。结构通常由container元素构成，除了允许CSS隔离一组元素，没有其它目的。即使没有展现类（presentational classes），它也是很明显的把展现和HTML混合在一起了。但是有必要把展现和内容混合在一起吗？</p>
+      <p>我相信，鉴于当前的HTML和CSS状态，把HTML和CSS明智地结合起来，当做表现层是非常需要的。而通过模板和局部模板（partials）也可以把内容层进行分离。&nbsp;</p>
+    </section>
+    
+    <section class="slide" id="solution">
+      <h2>解决方案</h2>
+      <p>如果把HTML和CSS结合起来，作为一个Web应用程序的表现层，那么它们需要采取一些方式更好地促进优秀CSS架构的形成。</p>
+      <p>最好的方法是CSS中尽可能少的包含HTML架构。CSS则是应该定义元素的视觉效果，并且该视觉元素无论放在哪里都应该拥有完全一致的显示效果。如果有一些特定的组件需要在不同的场合显示不同的效果，那么调用方式应该有些不同，并且它是HTML的责任去调用它。</p>
+      <p>例如，CSS通过.button类选择器定义了一个按钮组件。如果HTML想要一个特定的元素看起来像按钮，那么就可以使用.button。如果有个地方的按钮与其他的有所不同（有可能更大和宽些），那么CSS需要定义一个新的类，HTML可以使用新的类来赋予该元素新的视觉效果。</p>
+      <p>CSS负责定义元素的显示效果，而HTML负责将这些样式分配给页面中不同的元素。CSS知道HTML结构越少越好。</p>
+      <p>准确地在HTML中声明元素不仅可以清晰表达设计意图，其他开发者也可以清晰地查看标记并且知道元素将呈现的样子。如果没有这种实践，它很难区分一个元素的外观设置是有意或无意的，这样很容易导致团队混乱。</p>
+    </section>
+    
+    <section class="slide" id="best-practise">
+      <h2>最佳实践</h2>
+      <p>针对上面的种种错误，我进行了很好地总结，并且根据自身经验提出了一些建议，希望它们能帮助您更好地实现良好的CSS架构目标。</p>
+      <ul>
+      	<li>专注</li>
+      	<li>分离功能</li>
+      	<li>给类使用命名空间</li>
+      	<li>创建修饰符类来扩展组件</li>
+      	<li>把CSS组织成逻辑结构</li>
+      	<li>因样式和风格使用类</li>
+      	<li>有逻辑的命名类</li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="intentional">
+      <h2>专注</h2>
+      <p>确保选择器对一些元素不进行无关样式的最好方法是不给它们机会。例如像#main-nav ul li ul li div这样的选择器可能很容易地应用于不想要的元素上。另一方面，像.subnav这样的选择器就不会有任何机会应用到其它元素上。把类选择器直接应用于你想要的元素上是保持元素的可预测性的最好的方式。</p>
+      <pre>
+        /* Grenade */
+        #main-nav ul li ul { }
+
+        /* Sniper Rifle */
+        .subnav { }
+      </pre>
+      <p>上面给出了两个例子，想像第一个像一个手榴弹，第二个像一个狙击步枪。手榴弹也许今天可以很好的工作，但是永远不知道什么时候一个无辜的平民会走进爆炸半径。</p>
+    </section>
+    
+    <section class="slide" id="separate">
+      <h2>分离功能</h2>
+      <p>一个组织结构良好的组件层可以帮助降低HTML结构在CSS中的耦合性。此外，CSS组件本身应该是模块化的。组件应该知道如何对自己进行很好的样式化，但是不应该对布局、定位以及它们与周围元素的关系做太多的假设。</p>
+      <p>一般而言，CSS要定义的应该是组件的外观，而不是布局或者位置。同样在使用background、color和font这些属性时也要和使用位置、宽度、高度以及margin时遵循同样的原则。</p>
+      <p>布局和位置应当由一个单独的布局类或者单独的容器元素构成（请记住，有效地把内容与展示进行分离通常就是把内容与容器进行分离）。</p>
+    </section>
+    
+    <section class="slide" id="namespace">
+      <h2>给类使用命名空间</h2>
+      <p>我们已经检查出为什么父选择器不能在封闭和防止交叉样式污染上面发挥100%的功效。一个更好的解决方案就是在类上应用命名空间。如果一个元素是可视化组件的一员，那么该元素的每个子元素的类都应该使用基于该组件类名作为命名空间。</p>
+      <pre>
+        /* High risk of style cross-contamination */
+        .widget { }
+        .widget .title { }
+
+        /* Low risk of style cross-contamination */
+        .widget { }
+        .widget-title { }
+      </pre>
+      <p>给类进行命名空间可以保持组件独立性和模块化。它可以把现有类冲突降至最小并且减少了给子元素添加样式的权重。</p>
+    </section>
+    
+    <section class="slide" id="modifier">
+      <h2>创建修饰符类来扩展组件</h2>
+      <p>当一个现有组件需要在一个特定的环境中有所不同时，可以创建一个修饰符类（modifier class）来扩展它。</p>
+      <pre>
+        /* Bad */
+        .widget { }
+        #sidebar .widget { }
+
+        /* Good */
+        .widget { }
+        .widget-sidebar { }
+      </pre>
+      <p>我们已经看到了基于父元素对组件进行修改的缺点，需要重申：一个修饰符类可以在任何地方使用。基于位置的覆盖只能被用在一个特定的位置，而修饰符类则可以根据需要被多次使用。最后，修饰符类可以在HTML中把开发者的真实意图清晰的表达出来。而基于位置的类，在另一方面，当开发者只看HTML代码时它是完全不可见的，大大的增加了被忽略的可能性。</p>
+    </section>
+    
+    <section class="slide" id="logical">
+      <h2>把CSS组织成逻辑结构</h2>
+      <p><a target="_blank" href="http://snook.ca/">Jonathan Snook</a>在其非常优秀的《<a target="_blank" href="http://smacss.com/">SMACSS</a>》书中提到，CSS可以被分成四个不同的类：基础（base）、布局（layout）、模块（modules）和状态（state）。基础包括了复位规则和元素缺省值；布局是对站点范围内的元素进行定位以及像网格系统那样作为一种通用布局助手；模块即是可重用的视觉元素；状态是可以通过JavaScript进行开启或关闭的样式。</p>
+      <p>在SMACSS系统里，模块(等价于我所说的组件)包含了绝大部分的CSS规则，因此我经常发现有必要进一步分解成抽象的模板。</p>
+      <p>组件是一个独立的视觉元素。模板在另一方面则是构建块。模板不是独立使用的，并且很少用于描述元素的外观，相反，它们是单一的、可重用的样式，可以放在一起形成组件。</p>
+      <p>为了提供更详细的例子，一个组件可能就是一个模式对话框。该模式可能在头部包含渐变的网站签名、或者在周围会有阴影、在右上角会有关闭按钮、位置固定在垂直与水平线中间。这四个模式可能被网站重复多次使用，所以在每次使用的时候，你都很少会想到重新编码与设计。这些所有的模板即形成了一个模式对话框模块。</p>
+    </section>
+    
+    <section class="slide" id="style-only">
+      <h2>因样式和风格使用类</h2>
+      <p>有过大型网站建设的人可能有个这样的经验，一个拥有类的HTML元素可能完全不知道其用途。你想删除它，但是又犹豫不决，因为它的作用你可能还未意识到。一旦这样的事情一遍又一遍发生的时候，随着时间的推移，项目中将会有越来越多这样的类，只因为团队成员都不敢删除。</p>
+      <p>在Web前端开发中，类承担了太多的责任，因此才会产生这样的问题。样式化HTML元素、扮演着JavaScript hook角色、功能检测、自动化测试等。</p>
+      <p>当这么多应用程序在使用类时，让你从HTML中删除它们将会变的非常艰难。</p>
+      <p>然而，建立一些约定即可完全避免这种问题。当在HTML中看到一个类时，你应该立即明白它的目的。我建议给所有不是用于样式的类加上前缀，例如用于JavaScript的在前面加.js，表示Modernizr classes可以在前面加.supports，没有加前缀的即用于表示样式。</p>
+      <p>这样来发现未使用的类和从HTML中移除它们将会变得非常简单。你甚至可以自动完成这一个过程，在JavaScript中通过交叉引用HTML中的document.styleSheets对象。如果在document.styleSheets中没有发现该类，即可安全移除。</p>
+      <p>一般来说，最佳做法是把内容与展示相分离，另外把展示从功能中分离开来也同样重要。把样式类当作JavaScript hook在某种程度上可以加深CSS与JavaScript之间的耦合，将会导致在不打破功能性的前提下很难或者根本不可能更改外观。&nbsp;</p>
+    </section>
+    
+    <section class="slide" id="name-logical1">
+      <h2>有逻辑的命名类1</h2>
+      <p>大多数写CSS的人喜欢使用连字符来分隔名词，但连字符并不足以区分不同类型之间的类。</p>
+      <p><a target="_blank" href="http://nicolasgallagher.com/">Nicolas Gallagher</a>最近针对遇到的问题写了一个<a target="_blank" href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">解决方案</a>，并且取得了巨大的成功（略有改动），为了说明命名约定，可以考虑以下格式：</p>
+      <pre>
+        /* A component */
+        .button-group { }
+
+        /* A component modifier (modifying .button) */
+        .button-primary { }
+
+        /* A component sub-object (lives within .button) */
+        .button-icon { }
+
+        /* Is this a component class or a layout class? */
+        .header { }
+      </pre>
+    </section>
+    
+    <section class="slide" id="name-logical2">
+      <h2>有逻辑的命名类2</h2>
+      <p>从上述类中很难发现它们应用到什么类型的规则上。这不但会增加开发中的混乱，而且连自动测试CSS和HTML也变的很难。一个结构化的命名约定应该是初看就能够知道其类名与其他类之间的关系，并且知道它出现在HTML中的位置——使命名更加简单和容易测试。</p>
+      <pre>
+        /* Templates Rules (using Sass placeholders) */
+        %template-name
+        %template-name--modifier-name
+        %template-name__sub-object
+        %template-name__sub-object--modifier-name
+
+        /* Component Rules */
+        .component-name
+        .component-name--modifier-name
+        .component-name__sub-object
+        .component-name__sub-object--modifier-name
+
+        /* Layout Rules */
+        .l-layout-method
+        .grid
+
+        /* State Rules */
+        .is-state-type
+
+        /* Non-styled JavaScript Hooks */
+        .js-action-name
+      </pre>
+    </section>
+    
+    <section class="slide" id="name-logical3">
+      <h2>有逻辑的命名类3</h2>
+      <p>重做第一个例子：</p>
+      <pre>
+        /* A component */
+        .button-group { }
+
+        /* A component modifier (modifying .button) */
+        .button--primary { }
+
+        /* A component sub-object (lives within .button) */
+        .button__icon { }
+
+        /* A layout class */
+        .l-header { }
+      </pre>
+    </section>
+    
+    <section class="slide" id="reference">
+      <h2>Reference</h2>
+      <ul>
+        <li>
+          <strong>CSS Architecture</strong>: <a href="http://engineering.appfolio.com/2012/11/16/css-architecture/">http://www.w3.org/TR/html4/</a>
+        </li>
+        <li>
+          <strong>About HTML semantics and front-end architecture</strong>: <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/">http://nicolasgallagher.com/about-html-semantics-front-end-architecture/</a>
+        </li>
+        <li>
+          <strong>Scalable and Modular Architecture for CSS</strong>: <a href="http://smacss.com/book/">http://smacss.com/book/</a>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="q_a">
+      <h1>Q & A</h1>
+      
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+    <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- deck.hash snippet -->
+    <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+  </article>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+<script src="../js/common.js"></script>
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>

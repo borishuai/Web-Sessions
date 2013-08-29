@@ -1,0 +1,281 @@
+body{
+  font-size: 12px;
+}
+code{
+  color: #444 !important;
+}
+.mark{
+  font-weight: normal;
+  color: #C61800;
+  text-shadow: #C61800 0 0 1px;
+}
+.slide pre{
+  padding: 0.5em;
+}
+pre b {
+  font-weight: normal;
+  color: #C61800;
+  text-shadow: #C61800 0 0 1px;
+}
+#timeline {
+  margin-top: 15px;
+  font-size: 40px;
+}
+#timeline li {
+  padding: 10px;
+  list-style: none;
+}
+#timeline span{
+  display: inline-block;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+}
+#timeline span.year {
+  display: inline-block;
+  text-align: right;
+  width: 120px;
+  letter-spacing: -2px;
+  padding-right: 10px;
+  -webkit-box-shadow: none;
+}
+#timeline span.html {
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E88), to(#FEE));
+  background-color: #E88;
+  background: -moz-linear-gradient(left top, #E88, #FEE);
+}
+
+#timeline span.css {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF4), to(#FFA));
+  background-color: #FF4;
+  background: -moz-linear-gradient(left top, #FF4, #FFA);
+}
+
+#timeline span.js{
+  background: -webkit-gradient(linear, left top, left bottom, from(#4F4), to(#AFA));
+  background-color: #4F4;
+  background: -moz-linear-gradient(left top, #4F4, #AFA);
+}
+#timeline span.year.stroke{
+  color: #444 !important;
+  -webkit-text-stroke-color: red !important;
+  -webkit-text-stroke-width: 1px !important;
+}
+#timeline span.year.stroke.big{
+  font-size: 55px;
+}
+#timeline hr {
+  visibility: hidden;
+  padding: 0;
+  margin: 0 0 -20px 0;
+}
+
+#li_html5 div{
+  display: inline-block;
+  font-weight: bold;
+}
+
+
+#demo_validate_email_html{
+  border: 2px solid #1d87ea;
+}
+#demo_validate_email_js{
+  border: 2px solid #e8e352;
+}
+#demo_validate_email_js code{
+  font-size: 12px;
+  line-height: 5px;
+}
+#demo_validate_email_2{
+  display: block;
+  border: 3px solid #26ef05;
+  border-radius: 10px;
+}
+
+.demo-block{
+  margin: 20px auto !important;
+  display: block;
+  border: 3px solid #fd9d15 !important;
+  padding: 5px !important;
+  border-radius: 10px;
+  
+}
+
+.demo-block div{
+  border-radius: 10px;
+}
+
+.demo-block .sub-block{
+  margin: 5px !important; 
+  border: 3px solid #e8e352 !important;
+  padding: 5px !important;
+  border-radius: 10px;
+}
+
+.demo-block.final{
+  border: 3px solid #e74a2b !important;
+  padding: 5px !important;
+}
+.demo-block.final .sub-block{
+  margin: 5px !important; 
+  border: 3px solid #26ef05 !important;
+  padding: 5px !important;
+  border-radius: 10px;
+}
+
+#new_html5_elements details{
+  display: block;
+  float: left;
+  margin: 10px 20px;
+  border-radius: 10px;
+  border: 3px solid #e8e352 !important;
+  
+}
+
+#drop-zone, #drop-data {
+  padding: 40px;
+  border: 5px solid #888;
+  float: right;
+  height: 240px;
+  overflow: auto;
+  border-image: initial;
+}
+#drag-zone  li{
+  list-style: none;
+}
+#drag-zone, #drop-zone, #drop-data {
+  width: 20%;
+  display: inline-block;
+}
+#dropzone {
+  height: 150px;
+  width: 100%;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px dashed #0687FF;
+  border-image: initial;
+}
+.example {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-image: initial;
+}
+.dragout {
+  cursor: move;
+  background: #DDD;
+  padding: 6px;
+  margin: 10px;
+  border: 1px solid #666;
+  border-image: initial;
+}
+
+@font-face{
+  font-family: 'Eater';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Eater'), local('Eater-Regular'), url('http://themes.googleusercontent.com/static/fonts/eater/v2/9-lswE9dlkJOKjTTLVZ4tQ.woff') format('woff');
+}
+@font-face {
+  font-family: 'Italianno';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Italianno'), local('Italianno-Regular'), url('http://themes.googleusercontent.com/static/fonts/italianno/v3/RzzA8gdr3WCK_nxdg53KGj8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+.webfont-demo1 {
+  font-family: 'Molengo' !important;
+}
+.webfont-demo2 {
+  font-family: 'Droid Sans' !important;
+}
+.columns-demo{
+  -webkit-column-count: 3; 
+  -webkit-column-rule: 1px solid #bbb;
+  -webkit-column-gap: 2em;
+}
+.stroke-demo{
+  font-size: 40px !important;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 2.00px;
+}
+
+.opacity-demo{
+  font-size: 45px !important;
+  padding: 20px auto !important;
+  color: rgba(255, 0, 0, 0.61); 
+  background: rgba(0, 0, 255, 0.54);
+}
+.gradient-liner{
+  height: 100px;
+  background: -webkit-gradient(linear, left top, left bottom, 
+                             from(#00abeb), to(white), 
+                             color-stop(0.5, white), color-stop(0.5, #66cc00))
+}
+.gradient-radial{
+  height: 100px;
+  background: -webkit-gradient(radial, 430 50, 0, 430 50, 75, from(red), to(#000))
+}
+
+.shadow-demo{
+  font-size: 50px !important;
+  text-shadow: rgba(64, 64, 64, 0.5) 9px 9px 3px;
+  -webkit-box-reflect: below 10px;
+}
+
+.transitions .left {
+  margin-left: 0;
+}
+.transitions .right {
+  margin-left: 1000px;
+}
+#transitions-box-1{
+width: 20px;
+  height: 20px;
+  background: red;
+}
+
+#transitions-box-2 {
+  width: 20px;
+  height: 20px;
+  background: red;
+  -webkit-transition: margin-left 1s ease-in-out;
+}
+
+#threed-example {
+  -webkit-transform: rotateZ(5deg);
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+}
+#threed-example:hover {
+  -webkit-transform: rotateZ(-5deg);
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 0.0;
+   font-size: 100%;
+ }
+ to {
+   opacity: 1.0;
+   font-size: 200%;
+ }
+}
+
+#animation-example {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}

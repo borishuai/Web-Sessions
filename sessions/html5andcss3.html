@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>HTML5 & CSS3 Introduction</title>
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="../core/deck.core.css">
+	<link rel="stylesheet" href="../extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="../extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="../extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="../extensions/status/deck.status.css">
+	<link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="../extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/html5_css3.css">
+
+  <!--
+  <link rel="stylesheet" href="../demos/jquery.mobile.demo/demos/css/themes/default/jquery.mobile-1.1.0.min.css" />
+  <script src="../demos/jquery.mobile.demo/demos/js/jquery.js"></script>
+	<script src="../demos/jquery.mobile.demo/demos/js/jquery.mobile-1.1.0.min.js"></script>
+  -->
+	
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="../themes/style/web-2.0.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="../themes/transition/horizontal-slide.css">
+	
+	<script src="../modernizr.custom.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <button id="toggle_menu">Show Menu</button>
+      <button id="toggle_goto">Toggle Goto</button>
+      <button id="first_page">First Page</button>
+      <button id="last_page">Last Page</button>
+    </nav>
+  </header>
+  
+  <article class="deck-container">
+    <!-- Begin slides -->
+    <section class="slide" id="title-slide">
+      <h1>HTML5 & CSS3 Intro</h1>
+    </section>
+
+    <section class="slide" id="html_agenda">
+      <h2>Agenda</h2>
+      <ul>
+        <!--<li><h3>What does jQuery Mobile do?</h3></li>-->
+        <li><h3><a data-hash="what_is_html5" href="#what_is_html5">What is HTML5</a></h3></li>
+        <li><h3><a data-hash="semantics_markup_title" href="#semantics_markup_title">Semantics & Markup</a></h3></li>
+        <li><h3><a data-hash="storage_offline_title" href="#storage_offline_title">Storage/Offline</a></h3></li>
+        <li><h3><a data-hash="mutimedia_title" href="#mutimedia_title">Multimedia</a></h3></li>
+        <li><h3><a data-hash="graphics_3d_title" href="#graphics_3d_title">Graphics & 3D</a></h3></li>
+        <li><h3><a data-hash="file_access_title" href="#file_access_title">File Access</a></h3></li>
+        <li><h3><a data-hash="connectivity_title" href="#connectivity_title">Connectivity</a></h3></li>
+        <li><h3><a data-hash="css3_title" href="#css3_title">CSS 3</a></h3></li>
+        <li><h3><a data-hash="nuts_bolts_title" href="#nuts_bolts_title">Nuts & Bolts</a></h3></li>
+        <li><h3><a data-hash="reference_title" href="#reference_title">Reference</a></h3></li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="what_is_html5">
+      <div class="vcenter">
+        <h2>What is HTML5?</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="rough_timeline_of_web">
+      <h2>Rough Timeline of Web Technologies</h2>
+      <ul id="timeline">
+        <li data-auto=""><span class="year">1991</span> <span class="html">HTML</span></li>
+        <li data-auto=""><span class="year">1994</span> <span class="html">HTML 2</span></li>
+        <li data-auto=""><span class="year">1996</span> <span class="css">CSS 1</span> + <span class="js">JavaScript</span></li>
+        <li data-auto=""><span class="year">1997</span> <span class="html">HTML 4</span></li>
+        <li data-auto=""><span class="year">1998</span> <span class="css">CSS 2</span></li>
+        <li data-auto=""><span class="year">2000</span> <span class="html">XHTML</span></li>
+        <li><span class="year stroke">2002</span> <span class="css">Tableless Web Design</span></li>
+        <li><span class="year stroke">2005</span> <span class="js">AJAX</span></li>
+        <li><span class="year stroke big">2009</span> <span class="html">HTML 5</span></li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="what_is_html5_1">
+      <h2>What is HTML5?</h2>
+      <ul>
+        <li class="slide">The new major milestone for HTML</li>
+        <li class="slide">Focused on Web Applications</li>
+        <li id="li_html5" class="slide">HTML5 ~= <div class="">HTML</div> + <div class="">CSS</div> + <div class="">JS</div></li>
+        <li class="slide">HTML5 <strong>=</strong> Next Generation Features for Modern Web Development</li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="what_is_html5_2">
+      <h2>What is HTML5?</h2>
+      <div><img src="../img/html5_css3/html5_at_a_glance.jpg"></div>
+    </section>    
+
+    <section class="slide" id="semantics_markup_title">
+      <div class="vcenter">
+        <h2>Semantics & Markup</h2>
+      </div>
+    </section> 
+    
+    <section class="slide" id="new_html5_elements">
+      <h2>New HTML5 Elements</h2>
+      <p>Please reference to <a href="http://www.w3school.com.cn/html5" target="_blank">http://www.w3school.com.cn/html5</a> for more elements details.</p>
+      <details>
+        <summary>Layout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>
+        <ul>
+          <li>article</li>
+          <li>section</li>
+          <li>aside</li>
+          <li>nav</li>
+          <li>figure</li>
+          <li>figcaption</li>
+          <li>header</li>
+          <li>footer</li>
+          <li>details</li>
+          <li>summary</li>
+          <li>hgroup</li>
+          <li>meter</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Mutimedia&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>
+        <ul>
+          <li>audio</li>
+          <li>video</li>
+          <li>source</li>
+        </ul>
+      </details>      
+      <details>
+        <summary>Graphics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>
+        <ul>
+          <li>canvas</li>
+          <li>svg</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Forms&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>
+        <ul>
+          <li>datalist</li>
+          <li>progress</li>
+          <li>output</li>
+          <li>keygen</li>
+        </ul>
+      </details>      
+      <details>
+        <summary>Other&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</summary>
+        <ul>
+          <li>command</li>
+          <li>menu</li>
+          <li>embed</li>
+        </ul>
+      </details>
+      <div style="clear: both;"></div>
+      
+    </section>   
+    
+    <section class="slide" id="better_layout_tags">
+      <h2>Better Layout Example</h2>
+      <img src="../img/html5_css3/better_layout.png">
+    </section>
+    
+    <section class="slide" id="new_form_types">
+      <h2>New form types</h2>
+      <style>
+      .form-inputs {
+        font-size: 80%;
+      }
+      .form-inputs input {
+        float: right;
+        border: 1px solid #CCC;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset;
+        padding: 3px 5px;
+      }
+      input[required] {
+        border-color: #88a;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, rgba(0, 0, 255, 0.5) 0px 0px 3px;
+      }
+      input:invalid {
+        border-color: #e88;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+        -moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+        -o-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 3px inset, 0 0 5px rgba(255, 0, 0, .8);
+      }
+      </style>
+      <pre class="form-inputs prettyprint"><input type="text" required=""><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text"</span><span class="pln"> </span><b><span class="atn">required</span></b><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="email" value="some@email.com"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">email</span></b><span class="atv">"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"some@email.com"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="date" min="2010-08-14" max="2011-08-14" value="2010-08-14"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">date</span></b><span class="atv">"</span><span class="pln"> </span><b><span class="atn">min</span></b><span class="pun">=</span><span class="atv">"2010-08-14"</span><span class="pln"> </span><b><span class="atn">max</span></b><span class="pun">=</span><span class="atv">"2011-08-14"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"2010-08-14"</span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="range" min="0" max="50" value="10"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">range</span></b><span class="atv">"</span><span class="pln"> </span><b><span class="atn">min</span></b><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><b><span class="atn">max</span></b><span class="pun">=</span><span class="atv">"50"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input results="10" type="search" placeholder="Search..."><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">search</span></b><span class="atv">"</span><span class="pln"> </span><b><span class="atn">results</span></b><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><b><span class="atn">placeholder</span></b><span class="pun">=</span><span class="atv">"Search..."</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="tel" placeholder="(555) 555-5555" pattern="^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">tel</span></b><span class="atv">"</span><span class="pln"> &nbsp;</span><b><span class="atn">placeholder</span></b><span class="pun">=</span><span class="atv">"(555) 555-5555"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><b><span class="atn">pattern</span></b><span class="pun">=</span><span class="atv">"^\(?\d{3}\)?[-\s]\d{3}[-\s]\d{4}.*?$"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="color" placeholder="e.g. #bbbbbb"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">color</span></b><span class="atv">"</span><span class="pln"> </span><b><span class="atn">placeholder</span></b><span class="pun">=</span><span class="atv">"e.g. #bbbbbb"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br><br></span><input type="number" step="1" min="-5" max="10" value="0"><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">number</span></b><span class="atv">"</span><span class="pln"> </span><b><span class="atn">step</span></b><span class="pun">=</span><span class="atv">"1"</span><span class="pln"> </span><b><span class="atn">min</span></b><span class="pun">=</span><span class="atv">"-5"</span><span class="pln"> </span><b><span class="atn">max</span></b><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"><br></span><div style="height:0px; clear:both;"><span class="pln"><br></span></div></pre>
+    </section>
+    
+    <section class="slide" id="form_field_onmobile">
+      <h2>Form field types on mobile</h2>
+      <style type="text/css" media="screen">
+        #form_field_onmobile .div-block {
+          float: left;
+          width: 24%;
+          padding-right: 1%;
+          text-align: center;
+        }
+        #form_field_onmobile img {
+          width: 90%;
+          -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 4px 6px;
+        }
+      </style>
+      <div class="div-block">
+<pre class="prettyprint"><span class="pln">type</span><span class="pun">=</span><span class="str">"</span><em><span class="str">text</span></em><span class="str">"</span></pre>
+        <figure>
+          <img src="../img/html5_css3/android-form-text.png" alt="android keyboard on input type text">
+          <figcaption>Android Device</figcaption>
+        </figure>
+      </div>
+      <div class="div-block">
+<pre class="prettyprint"><span class="pln">type</span><span class="pun">=</span><span class="str">"</span><em><span class="str">number</span></em><span class="str">"</span></pre>
+        <figure>
+          <img src="../img/html5_css3/android-form-number.png" alt="android keyboard on input type number">
+          <figcaption>Android Device</figcaption>
+        </figure>
+      </div>
+      <div class="div-block">
+<pre class="prettyprint"><span class="pln">type</span><span class="pun">=</span><span class="str">"</span><em><span class="str">email</span></em><span class="str">"</span></pre>
+        <figure>
+          <img src="../img/html5_css3/iphone-form-email.png" alt="iphone keyboard on input type email">
+          <figcaption>iPhone Device</figcaption>
+        </figure>
+      </div>
+      <div class="div-block">
+<pre class="prettyprint"><span class="pln">type</span><span class="pun">=</span><span class="str">"</span><em><span class="str">tel</span></em><span class="str">"</span></pre>
+        <figure>
+          <img src="../img/html5_css3/iphone-form-tel.png" alt="iphone keyboard on input type tel">
+          <figcaption>iPhone Device</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <section class="slide" id="example_applications">
+      <h2>Examples for Applications</h2>
+      <div class="demo-block">
+<details>
+  <summary>HTML 5</summary>
+  <p>This slide deck teaches you everything you need to know about HTML 5.</p>
+</details>
+<div class="slide"><pre><code>&lt;details&gt;
+  &lt;summary&gt;HTML 5&lt;/summary&gt;
+  &lt;p&gt;This slide deck teaches you everything you need to know about HTML 5.&lt;/p&gt;
+&lt;/details&gt;</code></pre></div>
+      </div>      
+      <div class="demo-block">
+        <pre><code>&lt;<span class="mark">meter min</span>=&quot;0&quot; <span class="mark">max</span>=&quot;100&quot; <span class="mark">low</span>=&quot;40&quot; <span class="mark">high</span>=&quot;90&quot; <span class="mark">optimum</span>=&quot;100&quot; <span class="mark">value</span>=&quot;91&quot;&gt;A+&lt;/<span class="mark">meter</span>&gt;</code>
+Your score is: <meter value="91" min="0" max="100" low="40" high="90" optimum="100"><span class="pln">A+</span></meter><br>
+<code>&lt;<span class="mark">progress</span>&gt;working...&lt;/<span class="mark">progress</span>&gt;</code>
+Download is: <progress><span class="pln">working...</span></progress><br>
+<code>&lt;<span class="mark">progress</span> value=&quot;75&quot; max=&quot;100&quot;&gt;3/4 complete&lt;/<span class="mark">progress</span>&gt;</code>
+Goal is: <progress value="75" max="100"><span class="pln">3/4 complete</span></progress></pre>
+      </div>
+    </section>
+    
+    <section class="slide" id="descriptive_link">
+      <h2>Descriptive link relations</h2>
+      <div>
+        <pre class="prettyprint"><span class="tag">&lt;link</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"alternate"</span></b><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"application/rss+xml"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://myblog.com/feed"</span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;link</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"icon"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/favicon.ico"</span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;link</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"help"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://myblog.com/help"</span><span class="tag">/&gt;</span><span class="pln"><br></span><span class="tag">&lt;link</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"prefetch"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://myblog.com/main.php"</span><span class="tag">/&gt;</span><span class="pln"><br>...<br><br></span><span class="tag">&lt;a</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"archives"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://myblog.com/archives"</span><span class="tag">&gt;</span><span class="underlined"><span class="pln">old posts</span></span><span class="tag">&lt;/a&gt;</span><span class="pln"><br></span><span class="tag">&lt;a</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"external"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://notmysite.com"</span><span class="tag">&gt;</span><span class="underlined"><span class="pln">tutorial</span></span><span class="tag">&lt;/a&gt;</span><span class="pln"><br></span><span class="tag">&lt;a</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"license"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://www.apache.org/licenses/LICENSE-2.0"</span><span class="tag">&gt;</span><span class="underlined"><span class="pln">license</span></span><span class="tag">&lt;/a&gt;</span><span class="pln"><br></span><span class="tag">&lt;a</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"nofollow"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://notmysite.com/sample"</span><span class="tag">&gt;</span><span class="underlined"><span class="pln">wannabe</span></span><span class="tag">&lt;/a&gt;</span><span class="pln"><br></span><span class="tag">&lt;a</span><span class="pln"> </span><b><span class="atn">rel</span><span class="pun">=</span><span class="atv">"tag"</span></b><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"http://myblog.com/category/games"</span><span class="tag">&gt;</span><span class="underlined"><span class="pln">games posts</span></span><span class="tag">&lt;/a&gt;</span><span class="pln"><br>...</span></pre>
+      </div>
+      <p>Please reference to <a href="http://www.w3school.com.cn/html5/att_link_rel.asp" target="_blank">http://www.w3school.com.cn/html5/att_link_rel.asp</a> for more details.</p>
+    </section>
+    
+    <section class="slide" id="microdata_attributes">
+      <h2>Microdata</h2>
+      <pre class="prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><b><span class="atn">itemscope</span><span class="pln"> </span><span class="atn">itemtype</span><span class="pun">=</span><span class="atv">"http://example.org/band"</span></b><span class="tag">&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="pln">My name is </span><span class="tag">&lt;span</span><span class="pln"> </span><b><span class="atn">itemprop</span><span class="pun">=</span><span class="atv">"name"</span></b><span class="tag">&gt;</span><span class="pln">Neil</span><span class="tag">&lt;/span&gt;</span><span class="pln">.</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="pln">My band is called </span><span class="tag">&lt;span</span><span class="pln"> </span><b><span class="atn">itemprop</span><span class="pun">=</span><span class="atv">"band"</span></b><span class="tag">&gt;</span><span class="pln">Four Parts Water</span><span class="tag">&lt;/span&gt;</span><span class="pln">.</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br>&nbsp;</span><span class="tag">&lt;p&gt;</span><span class="pln">I am </span><span class="tag">&lt;span</span><span class="pln"> </span><b><span class="atn">itemprop</span><span class="pun">=</span><span class="atv">"nationality"</span></b><span class="tag">&gt;</span><span class="pln">British</span><span class="tag">&lt;/span&gt;</span><span class="pln">.</span><span class="tag">&lt;/p&gt;</span><span class="pln"><br></span><span class="tag">&lt;/div&gt;</span></pre>
+      <figcaption>Rich Snippets Testing Tool at <a href="http://www.google.com/webmasters/tools/richsnippets">http://www.google.com/webmasters/tools/richsnippet</a></figcaption>
+    </section>  
+    
+    <!--
+    <section class="slide" id="aria_attributes">
+      <h2>ARIA Attributes</h2>
+      <pre class="prettyprint"><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"tree1"</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><b><span class="atn">role</span></b><span class="pun">=</span><span class="atv">"</span><b><span class="atv">tree</span></b><span class="atv">"</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> <br>&nbsp; &nbsp; &nbsp; </span><b><span class="atn">aria-labelledby</span></b><span class="pun">=</span><span class="atv">"label_1"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;li</span><span class="pln"> </span><b><span class="atn">role</span></b><span class="pun">=</span><span class="atv">"</span><b><span class="atv">treeitem</span></b><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"-1"</span><span class="pln"> </span><b><span class="atn">aria-expanded</span></b><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;</span><span class="pln">Fruits</span><span class="tag">&lt;/li&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;li</span><span class="pln"> </span><b><span class="atn">role</span></b><span class="pun">=</span><span class="atv">"</span><b><span class="atv">group</span></b><span class="atv">"</span><span class="tag">&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="tag">&lt;ul&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;li</span><span class="pln"> </span><b><span class="atn">role</span></b><span class="pun">=</span><span class="atv">"</span><b><span class="atv">treeitem</span></b><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"-1"</span><span class="tag">&gt;</span><span class="pln">Oranges</span><span class="tag">&lt;/li&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="tag">&lt;li</span><span class="pln"> </span><b><span class="atn">role</span></b><span class="pun">=</span><span class="atv">"</span><b><span class="atv">treeitem</span></b><span class="atv">"</span><span class="pln"> </span><span class="atn">tabindex</span><span class="pun">=</span><span class="atv">"-1"</span><span class="tag">&gt;</span><span class="pln">Pineapples</span><span class="tag">&lt;/li&gt;</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; ...<br>&nbsp; &nbsp; </span><span class="tag">&lt;/ul&gt;</span><span class="pln"><br>&nbsp; </span><span class="tag">&lt;/li&gt;</span><span class="pln"><br></span><span class="tag">&lt;/ul&gt;</span></pre>
+    </section>
+    -->
+    
+    <section class="slide" id="storage_offline_title">
+      <div class="vcenter">
+        <h2>Storage/Offline</h2>
+      </div>
+    </section>
+
+    <section class="slide" id="web_storage">
+      <h2>Web Storage</h2>
+<pre><code>// use localStorage for persistent storage
+// use sessionStorage for per tab storage
+saveButton.addEventListener('click', function () {
+  window.<span class="mark">localStorage.setItem</span>('value', area.value);
+  window.<span class="mark">localStorage.setItem</span>('timestamp', (new Date()).getTime());
+}, false);
+textarea.value = window.<span class="mark">localStorage.getItem</span>('value');</code></pre>
+      <p id="localstorage-message">Save text value on the client side</p>
+      <textarea id="ta" placeholder="Type your text here..." style="width: 50%;height: 100px;"></textarea>
+      <button id="save-ta">Save</button>
+      <p id="ta-log"></p>
+      <script defer="">
+        (function(){
+          try {
+            (window.localStorage.getItem) // will throw in Firefox under some settings
+          } catch(e){
+            return; // quit because dom.storage.enabled is false
+          }
+
+          var area = document.querySelector('#ta');
+          // place content from previous edit
+          if (!area.value) {
+            area.value = window.localStorage.getItem('value');
+          }
+          updateLog(false);
+
+          // your content will be saved locally
+          document.querySelector('#save-ta').addEventListener('click', function () {
+            window.localStorage.setItem('value', area.value);
+            window.localStorage.setItem('timestamp', (new Date()).getTime());
+            updateLog(true);
+          }, false);
+
+          function updateLog(new_save) {
+            var log = document.querySelector("#ta-log");
+            var delta = 0;
+            if (window.localStorage.getItem('value')) {
+              delta = ((new Date()).getTime() - (new Date()).setTime(window.localStorage.getItem('timestamp'))) / 1000;
+              if (new_save) {
+                log.textContent = 'Saved. Content will be available after browser refresh/reopen.';
+                setTimeout(function() {
+                  log.textContent = '';
+                }, 3000);
+              } else {
+                log.textContent = 'last saved: ' + delta + 's ago';
+              }
+            }
+          }
+
+        })();  
+      </script>
+    </section>
+    
+    <section class="slide" id="web_sql_database">
+      <h2>Web SQL Database</h2>
+<pre><code>var db = window.<span class="mark">openDatabase</span>("DBName", "1.0", "description", 5*1024*1024); //5MB
+<span class="mark">db.transaction</span>(function(tx) {
+  <span class="mark">tx.executeSql</span>("<strong>SELECT * FROM test</strong>", [], successCallback, errorCallback);
+});</code></pre>
+
+      <div class="center" id="websqldb-example">
+        <input type="text" id="todoitem">
+        <button onclick="webSqlSample.newRecord()">new to do item</button>
+        <button onclick="webSqlSample.createTable()">create table</button>
+        <button onclick="webSqlSample.dropTable()">drop table</button>
+        <p>See the generated database: Developer &gt; Developer Tools &gt; Storage</p>
+        <ul class="record-list" id="db-results"><li><span contenteditable="true" onkeyup="webSqlSample.updateRecord(3864, this)">test</span> <a href="#" onclick="webSqlSample.deleteRecord(3864)">[Delete]</a></li><li><span contenteditable="true" onkeyup="webSqlSample.updateRecord(2205, this)">test</span> <a href="#" onclick="webSqlSample.deleteRecord(2205)">[Delete]</a></li></ul>
+        <div id="db-log"></div>
+      </div>
+      <script defer="">
+        var webSqlSample = (function() {
+          var db;
+          var log = document.getElementById('db-log');
+          if (window.openDatabase) {
+            db = openDatabase("DBTest", "1.0", "HTML5 Database API example", 200000);
+            showRecords();  
+          }
+          document.getElementById('db-results').addEventListener('click', function(e) { e.preventDefault(); }, false);
+
+          function onError(tx, error) {
+            log.innerHTML = '<p class="error">Error: ' + error.message + '</p>';
+          }
+
+          // select all records and display them
+          function showRecords() {
+            document.getElementById('db-results').innerHTML = '';
+            db.transaction(function(tx) {
+              tx.executeSql("SELECT * FROM Table1Test", [], function(tx, result) {
+                for (var i = 0, item = null; i < result.rows.length; i++) {
+                  item = result.rows.item(i);
+                  document.getElementById('db-results').innerHTML += 
+                      '<li><span contenteditable="true" onkeyup="webSqlSample.updateRecord('+item['id']+', this)">'+
+                      item['text'] + '</span> <a href="#" onclick="webSqlSample.deleteRecord('+item['id']+')">[Delete]</a></li>';
+                }
+              });
+            });
+          }
+
+          function createTable() {
+            db.transaction(function(tx) {
+              tx.executeSql("CREATE TABLE Table1Test (id REAL UNIQUE, text TEXT)", [],
+                  function(tx) {  log.innerHTML = '<p>"Table1Test" created!</p>' },
+                  onError);
+            });
+          }
+
+          // add record with random values
+          function newRecord() {
+            var num = Math.round(Math.random() * 10000); // random data
+            db.transaction(function(tx) {
+              tx.executeSql("INSERT INTO Table1Test (id, text) VALUES (?, ?)", [num, document.querySelector('#todoitem').value],
+                  function(tx, result) {
+                    log.innerHTML = '';
+                    showRecords();
+                  }, 
+                  onError);
+            });
+          }
+
+          function updateRecord(id, textEl) {
+            db.transaction(function(tx) {
+              tx.executeSql("UPDATE Table1Test SET text = ? WHERE id = ?", [textEl.innerHTML, id], null, onError);
+            });
+          }
+
+          function deleteRecord(id) {
+            db.transaction(function(tx) {
+              tx.executeSql("DELETE FROM Table1Test WHERE id=?", [id],
+                  function(tx, result) { showRecords() }, 
+                  onError);
+            });
+          }
+
+          // delete table from db
+          function dropTable() {
+            db.transaction(function(tx) {
+              tx.executeSql("DROP TABLE Table1Test", [],
+                  function(tx) { showRecords() }, 
+                  onError);
+            });
+          }
+          
+          return {
+            newRecord: newRecord,
+            createTable: createTable,
+            updateRecord: updateRecord,
+            deleteRecord: deleteRecord,
+            dropTable: dropTable
+          }
+        })();
+      </script>
+    </section>
+
+    <section class="slide" id="web_sql_indexeddb">
+      <h2>IndexedDB</h2>
+<pre><code>var idbRequest = window.<span class="mark">indexedDB.open</span>('Database Name');
+idbRequest.onsuccess = function(event) {
+  <span class="mark">var db = event.srcElement.result;</span>
+  var transaction = db.<span class="mark">transaction</span>([], <span class="mark">IDBTransaction.READ_ONLY</span>);
+  var curRequest = transaction.<span class="mark">objectStore</span>('ObjectStore Name').<span class="mark">openCursor</span>();
+  curRequest.<span class="mark">onsuccess</span> = ...;
+};</code></pre>
+      <div class="center" id="indexeddb-example">
+        <input type="text" placeholder="key" id="idb-key" size="10"> <input type="text" placeholder="value" id="idb-value" size="15">
+        <button onclick="indexedDbSample.idbSet()">set</button>
+        <button onclick="indexedDbSample.idbCreate()">create objectStore</button>
+        <button onclick="indexedDbSample.idbRemove()">remove objectStore</button>
+        <div id="idb-log"><p>Object store not yet created.</p></div>
+        <div class="record-list" id="idb-results-wrapper"></div>
+      </div>
+      <script defer="">
+        var indexedDbSample = (function() {
+          var idb_;
+          var idbRequest_;
+          var idbLog_ = document.getElementById('idb-log');
+          var idResultsWrapper_ = document.getElementById('idb-results-wrapper');
+
+          // IndexedDB spec is still evolving, various browsers keep it
+          // behind various flags and implementation varies.
+          if ('webkitIndexedDB' in window) {
+            window.indexedDB = window.webkitIndexedDB;
+            window.IDBTransaction = window.webkitIDBTransaction;
+          } else if ('moz_indexedDB' in window) {
+            window.indexedDB = window.moz_indexedDB;
+          }
+
+          // Open our IndexedDB if the browser supports it.
+          if (window.indexedDB) {
+            idbRequest_ = window.indexedDB.open("Test", "A test object store.");
+            idbRequest_.onerror = idbError_;
+            idbRequest_.addEventListener('success', function(event) {
+              idb_ = event.srcElement.result;
+              idbShow_(event);
+            }, false);
+          }
+
+          function idbError_(event) {
+            idbLog_.innerHTML += '<p class="error">Error: ' +
+                                 event.message + ' (' + event.code + ')</p>';
+          }
+
+          function idbShow_(event) {
+            if (!idb_.objectStoreNames.contains('myObjectStore')) {
+              idbLog_.innerHTML = "<p>Object store not yet created.</p>";
+              return;
+            }
+
+            var html = [];
+            var transaction = idb_.transaction([], IDBTransaction.READ_ONLY); // Read is default.
+            console.log(transaction);
+            var request = transaction.objectStore('myObjectStore').openCursor(); // Get all results.
+
+            // This callback will continue to be called until we have no more results.
+            request.onsuccess = function(e) {
+              var cursor = e.srcElement.result;
+              if (!cursor) {
+                idResultsWrapper_.innerHTML = '<ul class="record-list" id="idb-results">' + html.join('') + '</ul>';
+                return;
+              }
+              html.push('<li><span class="keyval" contenteditable onblur="indexedDbSample.updateKey(\'',
+                        cursor.key, '\', this)">', cursor.key, '</span> ',
+                        '=> <span class="keyval" contenteditable onblur="indexedDbSample.updateValue(\'',
+                        cursor.key, '\', this)">', cursor.value, '</span>&nbsp; ',
+                        '<a href="javascript:void(0)" onclick="indexedDbSample.deleteKey(\'',
+                        cursor.key, '\')">[Delete]</a></li>');
+              cursor.continue();
+            }
+            request.onerror = idbError_;
+          }
+
+          function idbCreate_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                idbRequest_.addEventListener('success', removeObjectStore, false); // If indexedDB is still opening, just queue this up.
+              }
+              return;
+            }
+
+            var request = idb_.setVersion('the new version string');
+            request.onerror = idbError_;
+            request.onsuccess = function(e) {
+              if (!idb_.objectStoreNames.contains('myObjectStore')) {
+                try {
+                  var objectStore = idb_.createObjectStore('myObjectStore', null); // FF is requiring the 2nd keyPath arg. It can be optional :(
+                  idbLog_.innerHTML = "<p>Object store created.</p>";
+                } catch (err) {
+                  idbLog_.innerHTML = '<p class="error">' + err.toString() + '</p>';
+                }
+              } else {
+                idbLog_.innerHTML = '<p class="error">Object store already exists.</p>';
+              }
+            }
+          }
+
+          function idbSet_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                idbRequest_.addEventListener('success', removeObjectStore, false); // If indexedDB is still opening, just queue this up.
+              }
+              return;
+            }
+
+            if (!idb_.objectStoreNames.contains('myObjectStore')) {
+              idbLog_.innerHTML = "<p class=\"error\">Object store doesn't exist.</p>";
+              return;
+            }
+
+             // Create a transaction that locks the world.
+            var objectStore = idb_.transaction([], IDBTransaction.READ_WRITE)
+                                  .objectStore("myObjectStore");
+            var request = objectStore.put(
+                document.getElementById('idb-value').value,
+                document.getElementById('idb-key').value);
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+
+          function updateKey_(key, element) {
+            var newKey = element.textContent;
+            var transaction = idb_.transaction([], IDBTransaction.READ_WRITE); // Create a transaction that locks the world.
+            var objectStore = transaction.objectStore("myObjectStore");
+            var request = objectStore.get(key);
+            request.onerror = idbError_;
+            request.onsuccess = function(event) {
+              var value = event.srcElement.result;
+              if (objectStore.delete) {
+                var request = objectStore.delete(key);
+              } else {
+                var request = objectStore.remove(key);
+              }
+              request.onerror = idbError_;
+              request.onsuccess = function(event) {
+                var request = objectStore.add(value, newKey);
+                request.onerror = idbError_;
+                request.onsuccess = idbShow_;
+              };
+            };
+          }
+
+          function updateValue_(key, element) {
+            var transaction = idb_.transaction([], IDBTransaction.READ_WRITE); // Create a transaction that locks the world.
+            var objectStore = transaction.objectStore("myObjectStore");
+            var request = objectStore.put(element.textContent, key);
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+
+          function deleteKey_(key) {
+            var transaction = idb_.transaction([], IDBTransaction.READ_WRITE); // Create a transaction that locks the world.
+            var objectStore = transaction.objectStore("myObjectStore");
+            if (objectStore.delete) {
+              var request = objectStore.delete(key);
+            } else {
+              var request = objectStore.remove(key);
+            }
+            request.onerror = idbError_;
+            request.onsuccess = idbShow_;
+          }
+
+          function idbRemove_() {
+            if (!idb_) {
+              if (idbRequest_) {
+                idbRequest_.addEventListener('success', removeObjectStore, false); // If indexedDB is still opening, just queue this up.
+              }
+              return;
+            }
+
+            var request = idb_.setVersion("the new version string");
+            request.onerror = idbError_;
+            request.onsuccess = function(event) {
+
+              if (idb_.objectStoreNames.contains('myObjectStore')) {
+                try {
+                  // Spec has been updated to deleteObjectStore.
+                  if (idb_.deleteObjectStore) {
+                    idb_.deleteObjectStore('myObjectStore');
+                  } else {
+                    idb_.removeObjectStore('myObjectStore');
+                  }
+                  idResultsWrapper_.innerHTML = '';
+                  idbLog_.innerHTML = "<p>Object store removed.</p>";
+                } catch (err) {
+                  idbLog_.innerHTML = '<p class="error">' + err.toString() + '</p>';
+                }
+              } else {
+                idbLog_.innerHTML = "<p class=\"error\">Object store doesn't exist.</p>";
+              }
+            };
+          }
+
+          return {
+            idbSet: idbSet_,
+            idbCreate: idbCreate_,
+            idbRemove: idbRemove_,
+            updateKey: updateKey_,
+            updateValue: updateValue_,
+            deleteKey: deleteKey_
+          }
+        })();
+      </script>
+      <p><a href="http://slides.html5rocks.com/#indexed-db">http://slides.html5rocks.com/#indexed-db</a></p>
+    </section>
+        
+    <section class="slide" id="application_cache">
+      <h2>Application Cache</h2>
+<pre><code>&lt;html <span class="mark">manifest=&quot;cache.appcache&quot;</span>&gt;</code></pre>
+<pre><code>window.<span class="mark">applicationCache</span>.addEventListener('updateready', function(e) {
+  if (window.<span class="mark">applicationCache.status</span> == window.<span class="mark">applicationCache.UPDATEREADY</span>) {
+    window.<span class="mark">applicationCache.swapCache()</span>;
+    if (confirm('A new version of this site is available. Load it?')) {
+      window.location.reload();
+    }
+  }
+}, false);</code></pre>
+<div>cache.appcache:</div>
+<pre><code>CACHE MANIFEST
+# version 1.0.0
+CACHE:
+/html5/src/logic.js
+/html5/src/style.css
+/html5/src/background.png
+NETWORK:
+*</code></pre>
+    </section>
+    
+    <section class="slide" id="mutimedia_title">
+      <div class="vcenter">
+        <h2>Multimedia</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="video">
+      <h2>Audio + Video</h2>
+<pre><code>&lt;<span class="mark">audio</span> id=&quot;audio&quot; src=&quot;sound.mp3&quot; controls&gt;&lt;/<span class="mark">audio</span>&gt;
+document.getElementById(&quot;audio&quot;).<span class="mark">muted</span> = false;
+</code></pre>
+<pre><code>&lt;<span class="mark">video</span> id=&quot;video&quot; src=&quot;movie.webm&quot; autoplay controls&gt;&lt;/<span class="mark">video</span>&gt;
+document.getElementById(&quot;video&quot;).<span class="mark">play</span>();
+</code></pre>
+      <div id="audio-column" style="display: inline-block;margin: 5px 30px;">
+        <audio id="audio-clip" width="670" controls="">
+          <source src="../img/html5_css3/src/rushus-modal_blues.mp3" type="audio/mpeg">
+          <source src="../img/html5_css3/src/rushus-modal_blues.ogg" type="audio/ogg">
+          Your browser does not support the audio tag
+        </audio>
+        <div class="media-buttons">
+          <input type="button" id="audio-play-button" onclick="MediaPlay('audio-clip')" value="Play">
+          <input type="button" id="audio-pause-button" onclick="MediaPause('audio-clip')" value="Pause">
+          <input type="button" id="audio-mute" onclick="MediaMute('audio-clip')" value="Mute">
+          <input type="button" id="audio-mute" onclick="MediaUnMute('audio-clip')" value="UnMute">
+        </div>
+      </div>
+      
+      <div id="video-column" style="display: inline-block;margin: 5px 30px;">
+        <video width="390" id="video-clip" controls="">
+          <source src="../img/html5_css3/src/chrome_japan.webm" type="video/webm; codecs=&quot;vp8, vorbis&quot;">
+          <source src="../img/html5_css3/src/chrome_japan.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
+          <source src="../img/html5_css3/src/chrome_japan.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;">
+          Your browser does not support the video tag
+        </video>
+        <div class="media-buttons">
+          <input type="button" id="play-button" onclick="MediaPlay('video-clip')" ;="" value="Play">
+          <input type="button" id="pause-button" onclick="MediaPause('video-clip')" ;="" value="Pause">
+          <input type="button" id="mute" onclick="MediaMute('video-clip')" value="Mute">
+          <input type="button" id="mute" onclick="MediaUnMute('video-clip')" value="UnMute">
+        </div>
+      </div>
+      <script defer="">
+      function MediaPlay(id) {
+        document.getElementById(id).play();
+      }
+      function MediaPause(id) {
+        document.getElementById(id).pause();
+      }
+      function MediaMute(id) {
+        document.getElementById(id).muted = true;
+      }
+      function MediaUnMute(id) {
+        document.getElementById(id).muted = false;
+      }
+      </script>
+    </section>
+    
+    <section class="slide" id="video_api">
+      <h2>Video API</h2>
+      <figure><img src="../img/html5_css3/video_api.png" /></figure>
+    </section>
+    
+    <section class="slide" id="graphics_3d_title">
+      <div class="vcenter">
+        <h2>Graphics & 3D</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="canvas">
+      <h2>Canvas 2D</h2>
+      <style>
+        #canvas-area {
+          background: white;
+          -webkit-border-radius: 8px;
+          -khtml-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+          border: 1px solid #bbb;
+        }
+      </style>
+      
+      <pre class="prettyprint"><span class="tag">&lt;canvas</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"canvas"</span><span class="pln"> </span><span class="atn">width</span><span class="pun">=</span><span class="atv">"838"</span><span class="pln"> </span><span class="atn">height</span><span class="pun">=</span><span class="atv">"220"</span><span class="tag">&gt;&lt;/canvas&gt;</span><span class="pln"><br><br></span><span class="tag">&lt;script&gt;</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> canvasContext </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"canvas"</span><span class="pun">).</span><b><span class="pln">getContext</span></b><span class="pun">(</span><span class="str">"2d"</span><span class="pun">);</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">fillRect</span></b><span class="pun">(</span><span class="lit">250</span><span class="pun">,</span><span class="pln"> </span><span class="lit">25</span><span class="pun">,</span><span class="pln"> </span><span class="lit">150</span><span class="pun">,</span><span class="pln"> </span><span class="lit">100</span><span class="pun">);</span><span class="pln"><br>&nbsp; <br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">beginPath</span></b><span class="pun">();</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">arc</span></b><span class="pun">(</span><span class="lit">450</span><span class="pun">,</span><span class="pln"> </span><span class="lit">110</span><span class="pun">,</span><span class="pln"> </span><span class="lit">100</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Math</span><span class="pun">.</span><span class="pln">PI </span><span class="pun">*</span><span class="pln"> </span><span class="lit">1</span><span class="pun">/</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Math</span><span class="pun">.</span><span class="pln">PI </span><span class="pun">*</span><span class="pln"> </span><span class="lit">3</span><span class="pun">/</span><span class="lit">2</span><span class="pun">);</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">lineWidth</span></b><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">15</span><span class="pun">;</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">lineCap</span></b><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'round'</span><span class="pun">;</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">strokeStyle</span></b><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="str">'rgba(255, 127, 0, 0.5)'</span><span class="pun">;</span><span class="pln"><br>&nbsp; canvasContext</span><span class="pun">.</span><b><span class="pln">stroke</span></b><span class="pun">();</span><span class="pln"><br></span><span class="tag">&lt;/script&gt;</span></pre>
+      <canvas id="canvas-area" width="838" height="225"></canvas>
+      <p>Please reference to <a href="https://developer.mozilla.org/en/HTML/Canvas" target="_blank">https://developer.mozilla.org/en/HTML/Canvas</a> for more details.</p>
+      <script defer="">
+        var canvasContext = document.getElementById("canvas-area").getContext("2d");
+        canvasContext.fillRect(250, 25, 150, 100);
+        canvasContext.beginPath();
+        canvasContext.arc(450, 110, 100, Math.PI * 1/2, Math.PI * 3/2, false);
+        canvasContext.lineWidth = 15;
+        canvasContext.lineCap = 'round';
+        canvasContext.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+        canvasContext.stroke();
+      </script>
+    </section>
+    
+    <section class="slide" id="canvas_webgl">
+      <h2>Canvas 3D (WebGL)</h2>
+<pre><code>&lt;canvas id=&quot;canvas&quot; width=&quot;838&quot; height=&quot;220&quot;&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  var gl = document.getElementById(&quot;canvas&quot;).<span class="mark">getContext</span>(&quot;experimental-webgl&quot;);
+  <span class="mark">gl.viewport</span>(0, 0, canvas.width, canvas.height);
+  ...
+&lt;/script&gt;</code></pre>
+      <p>Please reference to <a href="https://developer.mozilla.org/en/WebGL" target="_blank">https://developer.mozilla.org/en/WebGL</a> for more details.</p>
+    </section>
+    
+    <section class="slide" id="inline_svg">
+      <h2>Inline SVG</h2>
+      <style>
+        #svg {
+          -webkit-border-radius: 8px;
+          -khtml-border-radius: 8px;
+          -moz-border-radius: 8px;
+          border-radius: 8px;
+          border: 1px solid #bbb;
+        }
+      </style>
+<pre><code>&lt;html&gt;
+  <span class="mark">&lt;svg&gt;
+    &lt;circle id=&quot;myCircle&quot; class=&quot;important&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;100&quot; 
+        fill=&quot;url(#myGradient)&quot;
+        onmousedown=&quot;alert('hello');&quot;/&gt;
+  &lt;/svg&gt;</span>
+&lt;/html&gt;</code></pre>
+
+      <div class="svg"><svg width="300px" height="300px"><defs><linearGradient id="myGradient" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="5%" stop-color="red"></stop><stop offset="95%" stop-color="blue" stop-opacity="0.5"></stop></linearGradient></defs><circle cx="50%" cy="50%" r="100" fill="url(#myGradient)" stroke-color="red"></circle></svg></div>
+      <script defer="">
+        // insert SVG using script until SVG in HTML5 is more widely supported
+        // (currently supported in IE 9 and Firefox nightlies only)
+        var container = document.getElementsByClassName('svg')[0];
+        var svgns = 'http://www.w3.org/2000/svg';
+        var svg = document.createElementNS(svgns, 'svg');
+        svg.setAttribute('width', '300px');
+        svg.setAttribute('height', '300px');
+        
+        // our linearGradient
+        var defs = document.createElementNS(svgns, 'defs');
+        var gradient = document.createElementNS(svgns, 'linearGradient');
+        gradient.setAttribute('id', 'myGradient');
+        gradient.setAttribute('x1', '0%');
+        gradient.setAttribute('y1', '100%');
+        gradient.setAttribute('x2', '100%');
+        gradient.setAttribute('y2', '0%');
+        var stop = document.createElementNS(svgns, 'stop');
+        stop.setAttribute('offset', '5%');
+        stop.setAttribute('stop-color', 'red');
+        gradient.appendChild(stop);
+        stop = document.createElementNS(svgns, 'stop');
+        stop.setAttribute('offset', '95%');
+        stop.setAttribute('stop-color', 'blue');
+        stop.setAttribute('stop-opacity', '0.5');
+        gradient.appendChild(stop);
+        defs.appendChild(gradient);
+        svg.appendChild(defs);
+        
+        // our example circle
+        var circle = document.createElementNS(svgns, 'circle');
+        circle.setAttribute('cx', '50%');
+        circle.setAttribute('cy', '50%');
+        circle.setAttribute('r', 100);
+        circle.setAttribute('fill', 'url(#myGradient)');
+        circle.setAttribute('stroke-color', 'red');
+        circle.addEventListener('mousedown', function() {
+          alert('hello');
+        }, false);
+        svg.appendChild(circle);
+        container.appendChild(svg);
+      </script>
+    </section>
+    
+    
+    <section class="slide" id="svg_example">
+      <h2>SVG Example</h2>
+      <div id="svg-example"><object type="image/svg+xml" style="border:none; width:550px; height:540px; background: white;" data="../img/html5_css3/src/famoustiger.svg"></object></div>
+    </section>
+       
+    <section class="slide" id="file_access_title">
+      <div class="vcenter">
+        <h2>File Access</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="native_drag_drop">
+      <h2>Native Drag & Drop</h2>
+<pre><code>document.addEventListener('<span class="mark">dragstart</span>', function(event) {
+  event.<span class="mark">dataTransfer.setData</span>('text', 'Customized text');
+  event.<span class="mark">dataTransfer.effectAllowed</span> = 'copy';
+}, false);</code></pre>
+      <ul id="drag-zone">
+        <li><img src="../img/html5_css3/html5.jpg" style="width: 150px;height:150px;"></li>
+        <li>Select text and drag (original text will be dropped)</li>
+        <li>Select text and drag (dragged text data will be altered from original)</li>
+      </ul>
+      <div id="drop-data">Source Data</div>
+      <div id="drop-zone">Drop Area</div>
+      <script defer="">
+      (function() {
+        var dragZone = document.querySelector('#drag-zone');
+        var dropZone = document.querySelector('#drop-zone');
+        dragZone.addEventListener('dragstart', function(event) {
+          if (event.target.className) { // img case
+            event.dataTransfer.effectAllowed = event.target.className;
+            event.target.style.border = "4px solid #cc3300";
+          }
+          else { // text case
+            if (event.target.parentNode.className == 'overwrite') {
+              event.dataTransfer.setData("text", "<strong>Overwritten Content</strong>");
+            }
+            event.target.parentNode.style.border = "4px solid #cc3300";
+          }
+          return true;
+        }, true);
+        dragZone.addEventListener('dragend', function(event) {
+          if (event.target.className) { // img case
+            event.target.style.border = "4px solid #888";
+          }
+          else { // text case
+            event.target.parentNode.style.border = "4px solid #888";
+          }
+          return true;
+        }, true);
+        dropZone.addEventListener('dragenter', function(event) {
+          if (event.preventDefault) event.preventDefault();
+          event.dataTransfer.dropEffect = 'copy';
+          this.className = 'hovering';
+          return false;
+        }, false);
+        dropZone.addEventListener('dragover', function(event) {
+          if (event.preventDefault) event.preventDefault(); // allows us to drop
+          event.dataTransfer.dropEffect = 'copy';
+          return false;
+        }, false);
+        dropZone.addEventListener('dragleave', function(event) {
+          if (event.preventDefault) event.preventDefault(); // allows us to drop
+          this.className = '';
+          return false;
+        }, false);
+        dropZone.addEventListener('drop', function(event) {
+          if (event.preventDefault) event.preventDefault();
+          var imgPassed = null;
+          var dropdata = document.querySelector('#drop-data');
+          var types = event.dataTransfer.types;
+          document.querySelector('#drop-data').textContent = '';
+          this.innerHTML = '';
+          for (var i = 0; i < types.length; i++) {
+            if (types[i] == 'Files') {
+              var files = event.dataTransfer.files;
+              for (var j = 0; j < files.length; j++) {
+                dropdata.textContent += 'File Name: '+files[j].fileName;
+                dropdata.textContent += 'File Size: '+files[j].fileSize;
+              }
+            }
+            else {
+              if (typeof event.dataTransfer.getData(types[i]) !== 'undefined') {
+                dropdata.innerHTML += '<p><em class="datatypes">'+types[i]+'</em>: <br />'+event.dataTransfer.getData(types[i]).replace(/</g, '&lt;') + '</p>';
+              }
+            }
+
+            if (types[i] == 'text/uri-list') {
+              imgPassed = event.dataTransfer.getData('text/uri-list');
+            }
+          }
+          if (imgPassed) {
+            var cEl = document.createElement('canvas');
+            cEl.width = 200;
+            cEl.height = 100;
+            var ctx = cEl.getContext('2d');
+            var img_buffer = document.createElement('img');
+            img_buffer.src = imgPassed;
+            img_buffer.style.display = 'none';
+            document.body.appendChild(img_buffer); // this line only needed in safari
+            img_buffer.onload = function() { ctx.drawImage(img_buffer,0,0,100,100); }
+            this.appendChild(cEl);
+          } else {
+            if (event.dataTransfer.getData('text')) {
+              this.innerHTML = event.dataTransfer.getData('text');
+            }
+            else if (event.dataTransfer.getData('text/plain')) {
+              this.innerHTML = event.dataTransfer.getData('text/plain');
+            }
+          }
+          return false;
+        }, false);
+      })();
+      </script>
+    </section>
+    
+    <section class="slide" id="drag_in">
+      <h2>Drag files in from the desktop:</h2>
+<pre><code>document.querySelector('#dropzone').addEventListener('drop', function(e) {
+  var reader = new <span class="mark">FileReader</span>();
+  reader.onload = function(evt) {
+    document.querySelector('img').src = <span class="mark">evt.target.result</span>;
+  };
+
+  reader.<span class="mark">readAsDataURL(e.dataTransfer.files[0])</span>;
+}, false);</code></pre>
+      <div class="example">
+        <div id="dropzone" class="vbox boxcenter center">
+          Drop in images from your desktop
+        </div>
+      </div>
+      <div id="dnd-thumbnails" class="center"></div>
+
+      <script src="../img/html5_css3/src/dnd/dnd-lib.js" defer=""></script>
+      <script defer="">
+        window.addEventListener('load', function(e) {
+          var dndc = new DNDFileController('dropzone', 'dnd-thumbnails');
+        }, false);
+      </script>
+    </section>
+    
+    <section class="slide" id="dnd-section">
+      <h2>Desktop Drag-Out</h2>
+      <h3>Drag files out onto the desktop:</h3>
+
+      <pre class="prettyprint"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"src/star.mp3"</span><span class="pln"> </span><span class="atn">draggable</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"dragout"</span><span class="pln"><br>&nbsp; &nbsp;</span><span class="atn">data-downloadurl</span><span class="pun">=</span><span class="atv">"</span><b><span class="atv">MIMETYPE:FILENAME:ABSOLUTE_URI_TO_FILE</span></b><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">download</span><span class="tag">&lt;/a&gt;</span></pre>
+
+      <pre class="prettyprint"><span class="kwd">var</span><span class="pln"> files </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">querySelectorAll</span><span class="pun">(</span><span class="str">'.dragout'</span><span class="pun">);</span><span class="pln"><br></span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">var</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> file</span><span class="pun">;</span><span class="pln"> file </span><span class="pun">=</span><span class="pln"> files</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; file</span><span class="pun">.</span><span class="pln">addEventListener</span><span class="pun">(</span><span class="str">'dragstart'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">e</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; e</span><span class="pun">.</span><span class="pln">dataTransfer</span><span class="pun">.</span><span class="pln">setData</span><span class="pun">(</span><span class="str">'DownloadURL'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">dataset</span><span class="pun">.</span><span class="pln">downloadurl</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="pun">},</span><span class="pln"> </span><span class="kwd">false</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+      <div class="example">
+        Drag each of these files onto your desktop:
+        <a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en/us/intl/en/landing/chrome/cadie/glasses.pdf" class="dragout" data-downloadurl="application/pdf:Chrome3DGlasses.pdf:http://static.googleusercontent.com/external_content/untrusted_dlcp/www.google.com/en/us/intl/en/landing/chrome/cadie/glasses.pdf" draggable="true">.pdf file</a>
+        <a href="src/star.mp3" class="dragout" data-downloadurl="audio/mpeg:star.mp3:http://slides.html5rocks.com/src/star.mp3" draggable="true">.mp3 file</a>
+      </div>
+      <p class="center" style="font-size:90%">( this feature is only available in Google Chrome )</p>
+      <script defer="">
+        (function() {
+          var files = document.querySelectorAll('.dragout');
+          for (var i = 0, file; file = files[i]; ++i) {
+            file.setAttribute('draggable', 'true'); // Don't really need, but good practice.
+            file.addEventListener('dragstart', function(evt) {
+              evt.dataTransfer.setData('DownloadURL', this.getAttribute('data-downloadurl'));
+            }, false);
+          }
+        })();
+      </script>
+    </section>
+    
+    <section class="slide" id="geolocation">
+      <h2>Geolocation</h2>
+<pre><code>if (<span class="mark">navigator.geolocation</span>) {
+  <span class="mark">navigator.geolocation.getCurrentPosition</span>(function(position) {
+    var latLng = new google.maps.LatLng(
+        <span class="mark">position.coords.latitude</span>, <span class="mark">position.coords.longitude</span>);
+    var marker = new google.maps.Marker({position: latLng, map: map});
+    map.setCenter(latLng);
+  }, errorHandler);
+}</code></pre>
+      <p>Please reference to <a href="http://www.w3schools.com/html5/html5_geolocation.asp" target="_blank">http://www.w3schools.com/html5/html5_geolocation.asp</a> for more details.
+    </section>
+    
+    <section class="slide" id="speech_input">
+      <h2>Speech Input</h2>
+<pre><code>&lt;input type=&quot;text&quot; <span class="mark">x-webkit-speech</span> /&gt;</code></pre>
+      <input type="text" x-webkit-speech />
+    </section>
+    
+    <section class="slide" id="connectivity_title">
+      <div class="vcenter">
+        <h2>Connectivity</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="web_worker">
+      <h2>Web Worker</h2>
+      <h4>Dedicated worker</h4>
+      <div>main.js:</div>
+<pre><code>var worker = new <span class="mark">Worker</span>('task.js');
+worker.<span class="mark">onmessage</span> = function(event) { alert(event.data); };
+worker.<span class="mark">postMessage</span>('data');</code></pre>
+      <div>task.js:</div>
+<pre><code>self.<span class="mark">onmessage</span> = function(event) {
+  // Do some work.
+  self.<span class="mark">postMessage</span>(&quot;recv'd: &quot; + event.data);
+};</code></pre>
+
+
+      <h4>Shared worker</h4>
+<pre><code>var worker = new <span class="mark">SharedWorker</span>('sharedworker.js', 'mysharedworker');
+</code></pre>
+    </section>
+    
+    <section class="slide" id="web_socket">
+      <h2>Web Socket</h2>
+<pre><code>var socket = new <span class="mark">WebSocket</span>('ws://www.test.com/websocket');
+socket.<span class="mark">onopen</span> = function(event) {
+  socket.<span class="mark">send</span>('Hello, WebSocket');
+};
+socket.<span class="mark">onmessage</span> = function(event) { alert(event.data); }
+socket.<span class="mark">onclose</span> = function(event) { alert('closed'); }</code></pre>      
+    </section>
+    
+    <section class="slide" id="notification">
+      <h2>Notifications</h2>
+<pre><code>if (window.<span class="mark">webkitNotifications.checkPermission</span>() == 0) {
+  // you can pass any url as a parameter
+  window.<span class="mark">webkitNotifications.createNotification</span>(tweet.picture, tweet.title, 
+      tweet.text).show();
+} else {
+  window.<span class="mark">webkitNotifications.requestPermission</span>();
+}</code></pre>
+      <div>Reference:</div>
+      <div><a href="http://www.html5rocks.com/en/tutorials/notifications/quick/" target="_blank">http://www.html5rocks.com/en/tutorials/notifications/quick/</a></div>
+      <div><a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification" target="_blank">http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification</a></div>
+    </section>
+    
+    <section class="slide" id="css3_title">
+      <div class="vcenter">
+        <h2>CSS 3</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="css3_selector">
+      <h2>CSS3 Selector</h2>
+      <figure>
+        <img src="../img/html5_css3/css3_selector.png">
+      </figure>
+      <footer>Please reference to <a href="http://www.w3.org/TR/CSS2/selector.html#pattern-matching" target="_blank">CSS2 selectors</a> and 
+      <a href="http://www.w3.org/TR/css3-selectors/#selectors" target="_blank">CSS3 selectors</a> for more details.</footer>
+    </section>
+    
+    <section class="slide" id="web_font">
+      <h2>Web Fonts</h2>
+<pre><code><span class="mark">@font-face</span> {
+  font-family: 'Eater';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Eater'), local('Eater-Regular'), url('http://themes.googleusercontent.com/static/fonts/eater/v2/9-lswE9dlkJOKjTTLVZ4tQ.woff') format('woff');
+}
+<span class="mark">@font-face</span> {
+  font-family: 'Italianno';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Italianno'), local('Italianno-Regular'), url('http://themes.googleusercontent.com/static/fonts/italianno/v3/RzzA8gdr3WCK_nxdg53KGj8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+.demo {
+  font-family: 'Eater';
+}
+</code></pre>
+      <div class="demo-block">
+        <div style="font-family: Eater; font-size: 40px;">This is a demo for Web Font. (font-family: Eater; ) </div>
+        <div style="font-family: Italianno; font-size: 40px;">This is a demo for Web Font. (font-family: Italianno;) </div>
+      </div>
+    </section>
+    
+    <section class="slide" id="columns">
+      <h2>Columns</h2>
+<pre><code>  -webkit-<span class="mark">column-count</span>: 3; 
+  -webkit-<span class="mark">column-rule</span>: 1px solid #bbb;
+  -webkit-<span class="mark">column-gap</span>: 2em;</code></pre>
+      <div class="columns-demo demo-block">
+        <p>This is first paragraph.</p>
+        <p>This is secound paragraph.</p>
+        <p>This is third paragraph.</p>
+        <p>This is fourth paragraph.</p>
+        <p>This is fifth paragraph.</p>
+        <p>This is sixth paragraph.</p>
+      </div>
+    </section>
+    
+    <section class="slide" id="text_stroke">
+      <h2>Text stroke</h2>
+<pre><code>  -webkit-<span class="mark">text-fill-color</span>: black;
+  -webkit-<span class="mark">text-stroke-color</span>: red;
+  -webkit-<span class="mark">text-stroke-width</span>: 2.00px;</code></pre>
+      <div class="demo-block stroke-demo">This is stroke demo.</div>
+    </section>
+    
+    <section class="slide" id="opacity_round_corner">
+      <h2>Opacity</h2>
+      <pre><code>  color: <span class="mark">rgba</span>(255, 0, 0, 0.61); 
+  background: <span class="mark">rgba</span>(0, 0, 255, 0.54);</code></pre>
+      <div class="opacity-demo">
+        <div>Test Text </div>
+      </div>
+      <br>
+      <h2>Rounded Corners</h2>
+      <pre><code>  <span class="mark">border-radius</span>: 10px;</code></pre>
+      <div class="demo-block"><p>Round corner demo.</p><p>I'm round corner.</p></div>
+    </section>
+    
+    <section class="slide" id="gradient">
+      <h2>Gradients</h2>
+      <div class="demo-block">
+        <pre><code>background: -webkit-<span class="mark">gradient</span>(<span class="mark">linear</span>, left top, left bottom, 
+                               from(<span style="color: #00abeb">#00abeb</span>), to(white), 
+                               color-stop(0.5, white), color-stop(0.5, <span style="color: #66cc00">#66cc00</span>))</code></pre>
+        <div class="gradient-liner"></div>
+      </div>
+      <br><br>
+      <div class="demo-block">
+        <pre><code>background: -webkit-<span class="mark">gradient</span>(<span class="mark">radial</span>, 430 50, 0, 430 50, 75, from(red), to(#000))</code></pre>
+        <div class="gradient-radial"></div>
+      </div>
+    </section>
+    
+    <section class="slide" id="text_shadow">
+      <h2>Text shadow</h2>
+      <pre><code>  <span class="mark">text-shadow</span>: rgba(64, 64, 64, 0.5) 9px 9px 3px;
+  <span class="mark">-webkit-box-reflect</span>: below 10px;</code></pre>
+      <br>
+      <div class="shadow-demo">This is shadow demo.</div>
+    </section>
+    
+    <section class="slide" id="transition">
+      <h2>Transitions</h2>
+      <div class="transitions example">
+        <div id="transitions-box-1"></div>
+      </div>
+
+  <pre class="prettyprint"><span class="com">#box.left {</span><span class="pln"><br>&nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#box.right {</span><span class="pln"><br>&nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1000px</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'left'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionLeft(1)"><span class="typ">Left</span></button><span class="pln"><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'right'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionRight(1)"><span class="typ">Right</span></button></pre>
+
+      <div class="transitions example">
+        <div id="transitions-box-2"></div>
+      </div>
+
+  <pre class="prettyprint"><span class="com">#box {</span><span class="pln"><br>&nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><b><span class="pln">transition</span></b><span class="pun">:</span><span class="pln"> margin</span><span class="pun">-</span><span class="pln">left </span><span class="lit">1s</span><span class="pln"> ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'left'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionLeft(2)"><span class="typ">Left</span></button><span class="pln"><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'right'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionRight(2)"><span class="typ">Right</span></button></pre>
+
+
+      <script defer="">
+        function transitionLeft(no) {
+          document.getElementById('transitions-box-' + no).className = 'left';
+        }
+        function transitionRight(no) {
+          document.getElementById('transitions-box-' + no).className = 'right';
+        }
+      </script>
+    </section>
+    
+    <section class="slide" id="transform">
+      <h2>Transform</h2>
+      <p class="center">
+        Hover over me:
+      </p>
+      <pre id="threed-example" class="prettyprint"><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><b><span class="pln">transform</span></b><span class="pun">:</span><span class="pln"> </span><b><span class="pln">rotateY</span></b><span class="pun">(</span><span class="lit">45deg</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">scaleX</span></b><span class="pun">(</span><span class="lit">25deg</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">translate3d</span></b><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span class="pln"> </span><span class="lit">90deg</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">perspective</span></b><span class="pun">(</span><span class="lit">500px</span><span class="pun">)</span></pre>
+
+<pre class="prettyprint"><span class="com">#threed-example {</span><span class="pln"><br>&nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> rotateZ</span><span class="pun">(</span><span class="lit">5deg</span><span class="pun">);</span><span class="pln"><br><br>&nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transition</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform </span><span class="lit">2s</span><span class="pln"> ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#threed-example:hover {</span><span class="pln"><br>&nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><span class="pln">transform</span><span class="pun">:</span><span class="pln"> rotateZ</span><span class="pun">(-</span><span class="lit">5deg</span><span class="pun">);</span><span class="pln"><br></span><span class="pun">}</span></pre>
+    </section>
+    
+    <section class="slide" id="animation">
+      <h2>Animation</h2>
+<pre><code>@-webkit-<span class="mark">keyframes</span> pulse {
+ <span class="mark">from</span> {
+   opacity: 0.0;
+   font-size: 100%;
+ }
+ <span class="mark">to</span> {
+   opacity: 1.0;
+   font-size: 200%;
+ }
+}
+
+div {
+  -webkit-<span class="mark">animation-name</span>: pulse;
+  -webkit-<span class="mark">animation-duration</span>: 2s;
+  -webkit-<span class="mark">animation-iteration-count</span>: infinite;
+  -webkit-<span class="mark">animation-timing-function</span>: ease-in-out;
+  -webkit-<span class="mark">animation-direction</span>: alternate;
+}</code></pre>
+      <div id="animation-example" class="example">
+        Pulse!
+      </div>
+    </section>
+    
+    <section class="slide" id="nuts_bolts_title">
+      <div class="vcenter">
+        <h2>Nuts & Bolts</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="new_selector">
+      <h2>New Selectors</h2>
+      <h5>Finding elements by class (DOM API)</h5>
+<pre><code>var el = document.getElementById('section1');
+el.focus();
+
+var els = document.getElementsByTagName('div');
+els[0].focus();
+
+var els = document.document.<span class="mark">getElementsByClassName</span>('section');
+els[0].focus();</code></pre>
+<h5>Finding elements by CSS syntax (Selectors API)</h5>
+<pre><code>var els = document.document.<span class="mark">querySelectorAll</span>("ul li:nth-child(odd)");
+var tds = document.document.<span class="mark">querySelectorAll</span>("table.test > tr > td");
+var el = document.document.<span class="mark">querySelector</span>("table.test > tr > td"); // el == tds[0]</code></pre>
+    </section>
+    
+    <section class="slide" id="custom_data">
+      <h2>Custom data-* attributes</h2>
+      <h5>Define, store, and retrieve custom data on the DOM.</h5>
+      <div class="demo-block">
+<pre><code>&lt;div id=&quot;out&quot; <span class="mark">data-id</span>=&quot;good&quot; <span class="mark">data-name</span>=&quot;joe&quot; <span class="mark">data-screen-name</span>=&quot;user1&quot;&gt;&lt;/div&gt;</code></pre>
+
+<pre><code>// Add new data attributes via JS.
+var el = document.querySelector('#out');
+el.<span class="mark">setAttribute</span>('data-foo', 'bar');
+
+var html = [];
+for (var key in el.<span class="mark">dataset</span>) {
+  html.push(key, ': ', <span class="mark">el.dataset[key]</span>, '&lt;br&gt;');
+}
+
+el.innerHTML = html.join('');</code></pre>      
+      </div>
+      <h6>Output</h6>
+<pre><code>id: good
+name: joe
+screenName: user1
+foo: bar</pre></code>
+    </section>
+    
+    <section class="slide" id="classlist">
+      <h2>Element.classList</h2>
+      <div class="demo-block">
+<pre><code>&lt;div id=&quot;main&quot; class=&quot;shadow rounded&quot;&gt;&lt;/div&gt;</code></pre>
+<pre><code>var el = document.querySelector('#main').<span class="mark">classList</span>;
+el.<span class="mark">add</span>('highlight');
+el.<span class="mark">remove</span>('shadow');
+el.<span class="mark">toggle</span>('highlight');
+
+console.log(el.<span class="mark">contains</span>('highlight')); // false
+console.log(el.<span class="mark">contains</span>('shadow')); // false
+console.log(el.<span class="mark">classList</span>.toString() == el.className); // true</code></pre>
+    </div>
+    
+    <div>Output</div>
+<pre><code>&lt;div id=&quot;main&quot; class=&quot;rounded&quot;&gt;&lt;/div&gt;</code></pre>
+    </section>
+    
+    <section class="slide" id="history_api">
+      <h2>History API</h2>
+<pre><code>link.addEventListener('click', function(event) {
+  // manually add a value to the history stack
+  // without making the browser load any new page
+  history.<span class="mark">pushState</span>('Contact Page Form', 'Contact Page', '/contact');
+});
+
+// capture navigation in case we want to change,
+// for instance, some content when it changes
+window.addEventListener('<span class="mark">popstate</span>', function(event) {
+  document.querySelector('h1').innerText = event.<span class="mark">state</span>; // 'Contact Page Form'
+});</code></pre>
+    </section>
+    
+    <section class="slide" id="reference_title">
+      <div class="vcenter">
+        <h2>Reference</h2>
+      </div>
+    </section>
+    
+    <section class="slide" id="reference_resources">
+      <h2>Resources</h2>
+      <div>
+        <ul>
+          <li>Slides: <a href="http://slides.html5rocks.com" rel="external" class="ui-link">http://slides.html5rocks.com</a></li>
+          <li>html5rock.com: <a href="http://www.html5rocks.com" rel="external" class="ui-link">http://www.html5rocks.com</a></li>
+          <li><a href="https://developer.mozilla.org/en/HTML/HTML5">https://developer.mozilla.org/en/HTML/HTML5</a></li>
+          <li><a href="http://www.w3school.com.cn/html5/" rel="external" class="ui-link">http://www.w3school.com.cn/html5/</a></li>
+          <li><a href="http://www.w3schools.com/html5" rel="external" class="ui-link">http://www.w3schools.com/html5</a></li>
+          <li><a href="http://www.html5rocks.com/en/tutorials/notifications/quick/" target="_blank">http://www.html5rocks.com/en/tutorials/notifications/quick/</a></li>
+          <li><a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification" target="_blank">http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/demos/" target="_blank">https://developer.mozilla.org/en-US/demos/</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    
+    <section class="slide" id="q_a_title">
+      <div class="vcenter">
+        <h2>Q&A</h2>
+      </div>
+    </section>
+
+      
+    
+    <!-------- // TODO --------->
+
+    <!-- deck.navigation snippet -->
+    <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+    <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- deck.hash snippet -->
+    <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+  </article>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script>window.jQuery || document.write('<script src="../jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/hash/deck.hash.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+<script src="../js/common.js"></script>
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>
